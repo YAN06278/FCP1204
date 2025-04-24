@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You | Nexus Components</title>
+    <link rel="stylesheet" href="gpu-list.css">
+</head>
+<body>
+    <header>
+        <div class="logo-title-container">
+            <a href="home.html"><img src="comp-logo.jpg" alt="Company Logo" class="logo"></a>
+            <h1>Nexus Components</h1>
+        </div>
+        <div class="favorite-container">
+            <div class="favorite-icon" id="favorite-icon">
+                ♡
+                <span class="favorite-count">0</span>
+            </div>
+            <div class="favorite-dropdown" id="favorite-dropdown">
+                <div class="favorite-items-container">
+                    <h3>Your Favorites</h3>
+                    <div class="favorite-items-list" id="favorite-items-list">
+                        <p class="empty-favorite-message">Your favorites list is empty</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="cart-container">
+            <div class="cart-icon" id="cart-icon">
+                🛒
+                <span class="cart-count">0</span>
+            </div>
+            <div class="cart-dropdown" id="cart-dropdown">
+                <div class="cart-items-container">
+                    <h3>Your Cart</h3>
+                    <div class="cart-items-list" id="cart-items-list">
+                        <p class="empty-cart-message">Your cart is empty</p>
+                    </div>
+                    <div class="cart-total">
+                        <span>Total: RM</span>
+                        <span id="cart-total-price">0.00</span>
+                    </div>
+                    <button class="checkout-btn">Checkout</button>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="thank-you-container">
+        <div class="thank-you-card">
+            <div class="thank-you-header">
+                <h1>THANK YOU FOR YOUR ORDER!</h1>
+                <p>Your order has been received and is being processed.</p>
+                <div class="order-number">Order #<span id="orderNumber"></span></div>
+            </div>
+            
+            <div class="order-details">
+                <h2>Order Details</h2>
+                <div class="order-summary" id="orderSummary">
+                </div>
+                
+                <div class="customer-details">
+                    <h2>Customer Information</h2>
+                    <div class="details-grid">
+                        <div>
+                            <h3>Shipping Address</h3>
+                            <p id="shippingAddress"></p>
+                        </div>
+                        <div>
+                            <h3>Contact Information</h3>
+                            <p id="contactInfo"></p>
+                        </div>
+                        <div>
+                            <h3>Payment Method</h3>
+                            <p id="paymentMethod"></p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="order-totals">
+                    <h2>Order Total</h2>
+                    <div class="total-row">
+                        <span>Subtotal</span>
+                        <span id="orderSubtotal">RM0.00</span>
+                    </div>
+                    <div class="total-row">
+                        <span>Shipping</span>
+                        <span>RM10.00</span>
+                    </div>
+                    <div class="total-row grand-total">
+                        <span>Total</span>
+                        <span id="orderTotal">RM0.00</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="thank-you-actions">
+                <a href="gpu-list.html" class="continue-shopping-btn">Continue Shopping</a>
+                <a href="#" class="print-receipt-btn">Print Receipt</a>
+            </div>
+        </div>
+    </main>
+    
+    <footer class="footer">
+        <div class="footer-container">
+          <div class="footer-sections">
+            <div class="footer-section">
+              <div class="footer-title">CUSTOMER CARE</div>
+              <ul class="footer-links">
+                <li><a href="#">Shipping Policy</a></li>
+                <li><a href="#">Warranty & Exchange</a></li>
+                <li><a href="#">FAQs</a></li>
+                <li><a href="#">Contact Us</a></li>
+              </ul>
+            </div>
+            
+            <div class="footer-section">
+              <div class="footer-title">COMPANY</div>
+              <ul class="footer-links">
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Careers</a></li>
+                <li><a href="#">Terms of Service</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+              </ul>
+            </div>
+            
+            <div class="footer-section">
+              <div class="footer-title">PAYMENT METHODS</div>
+              <div class="payment-methods">
+                <div class="payment-item">VISA</div>
+                <div class="payment-item">MASTERCARD</div>
+                <div class="payment-item">HONGLEONG BANK</div>
+                <div class="payment-item">HSBC BANK</div>
+                <div class="payment-item">RHB BANK</div>
+                <div class="payment-item">UOB BANK</div>
+                <div class="payment-item">PUBLIC BANK</div>
+                <div class="payment-item">FPX</div>
+                <div class="payment-item">GRAB PAY</div>
+                <div class="payment-item">TOUCH'NGO EWALLET</div>
+                <div class="payment-item">BANKISLAM</div>               
+              </div>
+            </div>
+          </div>
+          
+          <div class="copyright">
+            &copy; 2023 Nexus Components. All Rights Reserved.
+          </div>
+        </div>
+      </footer>
+    <script src="thank-you.js"></script>
+</body>
+</html>

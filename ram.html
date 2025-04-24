@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>GPU List with Popups</title>
+    <link rel="stylesheet" href="gpu-list.css">
+</head>
+<body>
+    <header>
+        <div class="logo-title-container">
+            <a href="home.html"><img src="comp-logo.jpg" alt="Company Logo" class="logo"></a>
+            <h1>Nexus Components</h1>
+        </div>
+        <div class="favorite-container">
+            <div class="favorite-icon" id="favorite-icon">
+                ♡
+                <span class="favorite-count">0</span>
+            </div>
+            <div class="favorite-dropdown" id="favorite-dropdown">
+                <div class="favorite-items-container">
+                    <h3>Your Favorites</h3>
+                    <div class="favorite-items-list" id="favorite-items-list">
+                        <p class="empty-favorite-message">Your favorites list is empty</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="cart-container">
+            <div class="cart-icon" id="cart-icon">
+                🛒
+                <span class="cart-count">0</span>
+            </div>
+            <div class="cart-dropdown" id="cart-dropdown">
+                <div class="cart-items-container">
+                    <h3>Your Cart</h3>
+                    <div class="cart-items-list" id="cart-items-list">
+                        <p class="empty-cart-message">Your cart is empty</p>
+                    </div>
+                    <div class="cart-total">
+                        <span>Total: RM</span>
+                        <span id="cart-total-price">0.00</span>
+                    </div>
+                    <button class="checkout-btn">Checkout</button>
+                </div>
+            </div>
+        </div>
+    </header>
+    <nav class="pc-parts-nav">
+        <ul>
+          <li><a href="cpu.html"><img src="images-nav/cpu.avif" alt="Processor">PROCESSORS</a></li>
+          <li><a href="gpu-list.html"><img src="images-nav/Graphic_card.avif" alt="GRAPHICS CARD">GRAPHIC CARDS</a></li>
+          <li><a href="motherboard.html"><img src="images-nav/mobo.avif" alt="Motherboard">MOTHERBOARDS</a></li>
+          <li><a href="ram.html"><img src="images-nav/RAM_v5.avif" alt="RAM">RAM</a></li>
+          <li><a href="psu.html"><img src="images-nav/RGB_Power_Supply.avif" alt="PSU">POWER SUPPLY UNIT</a></li>
+          <li><a href="case.html"><img src="images-nav/PC_casing.avif" alt="Case">PC CASING</a></li>
+        </ul>
+    </nav>
+    <main>
+        <div class="gpu-list">
+            <ul>
+                <li>
+                    <a href="#popup-Kingston-Desktop">
+                        <div class="gpu-image-container"><img src="image-ram/ram5.webp" alt="Kingston Desktop"></div>
+                        <div class="gpu-content"><h2>Kingston Desktop (PC) DDR4 Fury Beast 3200Mhz RAM (8GB) *RGB</h2></div>
+                        <div class="gpu-price">RM95.00</div>
+                    </a>
+                </li>
+
+                <li data-badge="BEST REVIEW">
+                    <a href="#popup-Kingston-KVR">
+                        <div class="gpu-image-container"><img src="image-ram/ram1.webp" alt="Kingston KVR Desktop"></div>
+                        <div class="gpu-content"><h2>Kingston KVR Desktop (PC) DDR4 3200Mhz Value RAM (4GB)</h2></div>
+                        <div class="gpu-price">RM69.00</div>
+                    </a>
+                </li>    
+
+                <li data-badge="BEST SELLER">
+                    <a href="#popup-Kingston-FURY">
+                        <div class="gpu-image-container"><img src="image-ram/ram2.webp" alt="Kingston FURY"></div>
+                        <div class="gpu-content"><h2>Kingston FURY Beast RGB DDR5 (5600MHz) CL40 Desktop PC Gaming Memory DIMM RAM - (8GB)</h2></div>
+                        <div class="gpu-price">RM159.00</div>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#popup-Adata-XPG-Blade">
+                        <div class="gpu-image-container"><img src="image-ram/ram3.webp" alt="Adata XPG Blade"></div>
+                        <div class="gpu-content"><h2>Adata XPG Lancer Blade RGB DDR5 Memory PC Ram 6000Mhz AMD EXPO XMP 3.0 - Black (16GB)</h2></div>
+                        <div class="gpu-price">RM225.00</div>
+                    </a>
+                </li>
+
+                <li data-badge="BEST RATING">
+                    <a href="#popup-Adata-XPG-Neon">
+                        <div class="gpu-image-container"><img src="image-ram/ram4.webp" alt="Adata XPG Neon"></div>
+                        <div class="gpu-content"><h2>Adata XPG Lancer Neon RGB DDR5 Memory Gaming PC Ram 6400MT/s AMD EXPO XMP 3.0 - (16GB)</h2></div>
+                        <div class="gpu-price">RM609.00</div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </main>
+    
+    <div id="popup-Kingston-Desktop" class="product-popup-overlay">
+        <div class="product-popup">
+            <a href="#" class="close-popup">&times;</a>
+            <div class="product-image-container">
+                <img src="image-ram/ram5.webp" alt="Kingston Desktop">
+            </div>
+            <div class="product-details">
+                <h1 class="product-title">Kingston DDR4 Fury Beast</h1>
+                <div class="product-model">3200Mhz RAM（8GB）</div>
+                <div class="warranty">[Limited Lifetime Warranty]</div>
+                
+                <div class="price">RM95.00</div>
+                <div class="info">
+                    <div class="shipping-notice">Shipping calculated at checkout.</div>
+                    <div class="availability in-stock">Availability: In Stock</div>
+                </div>
+                <div class="specs">
+                    <h3>Technical Specifications:</h3>
+                    <div class="spec-item">
+                        <span class="spec-name">Dimensions:</span>
+                        <span class="spec-value">133.35mm x 34.1mm x 7.2mm</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-name">Frequencies:</span>
+                        <span class="spec-value">3200Mhz</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-name">Latencies:</span>
+                        <span class="spec-value">CLI5, CLI6, CLI7, CLI8, CLI9</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-name">Voltage:</span>
+                        <span class="spec-value">1.2V</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-name">Operating Temperature:</span>
+                        <span class="spec-value">0°C to 85°C</span>
+                    </div>
+                </div>
+                
+                <div class="action-buttons">
+                    <div class="quantity-selector">
+                        <button class="qty-btn minus">-</button>
+                        <input type="number" value="1" min="1" class="qty-input">
+                        <button class="qty-btn plus">+</button>
+                    </div>
+                    <button class="add-to-cart">ADD TO CART</button>
+                    <button class="add-to-favorite">❤ ADD TO FAVORITES</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="popup-Kingston-KVR" class="product-popup-overlay">
+        <div class="product-popup">
+            <a href="#" class="close-popup">&times;</a>
+            <div class="product-image-container">
+                <img src="image-ram/ram1.webp" alt="Kingston KVR Desktop">
+            </div>
+            <div class="product-details">
+                <h1 class="product-title">Kingston KVR DDR4</h1>
+                <div class="product-model">3200Mhz Value RAM (4GB)</div>
+                <div class="warranty">[Limited Lifetime Warranty]</div>
+
+                <div class="price">RM69.00</div>
+                <div class="info">
+                    <div class="shipping-notice">Shipping calculated at checkout.</div>
+                    <div class="availability in-stock">Availability: In Stock</div>
+                </div>
+                <div class="specs">
+                    <h3>Technical Specifications:</h3>
+                    <div class="spec-item">
+                        <span class="spec-name">CL(IDD):</span>
+                        <span class="spec-value">19 cycles</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-name">Row Cycle Time (tRCmin):</span>
+                        <span class="spec-value">45.75ns(min.)</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-name">Command Time (tRFCmin):</span>
+                        <span class="spec-value">350ns(min.)</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-name">UL Rating:</span>
+                        <span class="spec-value">94 V</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-name">Operating Temperature:</span>
+                        <span class="spec-value">0°C to 85°C</span>
+                    </div>
+                </div>
+                
+                <div class="action-buttons">
+                    <div class="quantity-selector">
+                        <button class="qty-btn minus">-</button>
+                        <input type="number" value="1" min="1" class="qty-input">
+                        <button class="qty-btn plus">+</button>
+                    </div>
+                    <button class="add-to-cart">ADD TO CART</button>
+                    <button class="add-to-favorite">❤ ADD TO FAVORITES</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="popup-Kingston-FURY" class="product-popup-overlay">
+        <div class="product-popup">
+            <a href="#" class="close-popup">&times;</a>
+            <div class="product-image-container">
+                <img src="image-ram/ram2.webp" alt="Kingston FURY Beast">
+            </div>
+            <div class="product-details">
+                <h1 class="product-title">Kingston FURY Beast RGB DDR5 5600MHz</h1>
+                <div class="product-model">CL40 Desktop PC Gaming Memory DIMM RAM (8GB)</div>
+                <div class="warranty">[Limited Lifetime Warranty]</div>
+
+                <div class="price">RM159.00</div>
+                <div class="info">
+                    <div class="shipping-notice">Shipping calculated at checkout.</div>
+                    <div class="availability in-stock">Availability: In Stock</div>
+                </div>
+                <div class="specs">
+                    <h3>Technical Specifications:</h3>
+                    <div class="spec-item">
+                        <span class="spec-name">Speeds:</span>
+                        <span class="spec-value">5600MT/s</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-name">Latencies:</span>
+                        <span class="spec-value">CL40</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-name">Voltage:</span>
+                        <span class="spec-value">1.1V</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-name">Dimensions:</span>
+                        <span class="spec-value">33.35 mm x 42.23 mm x 7.11 mm</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-name">Operating Temperature:</span>
+                        <span class="spec-value">0°C to 85°C</span>
+                    </div>
+                </div>
+                
+                <div class="action-buttons">
+                    <div class="quantity-selector">
+                        <button class="qty-btn minus">-</button>
+                        <input type="number" value="1" min="1" class="qty-input">
+                        <button class="qty-btn plus">+</button>
+                    </div>
+                    <button class="add-to-cart">ADD TO CART</button>
+                    <button class="add-to-favorite">❤ ADD TO FAVORITES</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="popup-Adata-XPG-Blade" class="product-popup-overlay">
+        <div class="product-popup">
+            <a href="#" class="close-popup">&times;</a>
+            <div class="product-image-container">
+                <img src="image-ram/ram3.webp" alt="Adata XPG Blade">
+            </div>
+            <div class="product-details">
+                <h1 class="product-title">Adata XPG Lancer Blade RGB DDR5 6000Mhz</h1>
+                <div class="product-model">AMD EXPO XMP 3.0 RAM (16GB)</div>
+                <div class="warranty">[Limited Lifetime Warranty]</div>
+
+                <div class="price">RM225.00</div>
+                <div class="info">
+                    <div class="shipping-notice">Shipping calculated at checkout.</div>
+                    <div class="availability in-stock">Availability: In Stock</div>
+                </div>
+                <div class="specs">
+                    <h3>Technical Specifications:</h3>
+                    <div class="spec-item">
+                        <span class="spec-name">Speeds:</span>
+                        <span class="spec-value">6000 MT/s</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-name">Weight:</span>
+                        <span class="spec-value">41.11g</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-name">Voltage:</span>
+                        <span class="spec-value">1.35-1.4V</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-name">Dimensions:</span>
+                        <span class="spec-value">133.35 x 40 x 7.86mm</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-name">Operating Temperature:</span>
+                        <span class="spec-value">0°C to 85°C</span>
+                    </div>
+                </div>
+                
+                <div class="action-buttons">
+                    <div class="quantity-selector">
+                        <button class="qty-btn minus">-</button>
+                        <input type="number" value="1" min="1" class="qty-input">
+                        <button class="qty-btn plus">+</button>
+                    </div>
+                    <button class="add-to-cart">ADD TO CART</button>
+                    <button class="add-to-favorite">❤ ADD TO FAVORITES</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="popup-Adata-XPG-Neon" class="product-popup-overlay">
+        <div class="product-popup">
+            <a href="#" class="close-popup">&times;</a>
+            <div class="product-image-container">
+                <img src="image-ram/ram4.webp" alt="Adata XPG Neon">
+            </div>
+            <div class="product-details">
+                <h1 class="product-title">Adata XPG Lancer Neon RGB DDR5 6400MT</h1>
+                <div class="product-model">AMD EXPO XMP 3.0 RAM (16GB)</div>
+                <div class="warranty">[Limited Lifetime Warranty]</div>
+
+                <div class="price">RM609.00</div>
+                <div class="info">
+                    <div class="shipping-notice">Shipping calculated at checkout.</div>
+                    <div class="availability in-stock">Availability: In Stock</div>
+                </div>
+                <div class="specs">
+                    <h3>Technical Specifications:</h3>
+                    <div class="spec-item">
+                        <span class="spec-name">Speeds:</span>
+                        <span class="spec-value">6400 MT/s</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-name">Weight:</span>
+                        <span class="spec-value">55.02g</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-name">Voltage:</span>
+                        <span class="spec-value">1.35-1.45V</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-name">Dimensions:</span>
+                        <span class="spec-value">133.35 x 45.18 x 8.7mm</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-name">Operating Temperature:</span>
+                        <span class="spec-value">0°C to 85°C</span>
+                    </div>
+                </div>
+                
+                <div class="action-buttons">
+                    <div class="quantity-selector">
+                        <button class="qty-btn minus">-</button>
+                        <input type="number" value="1" min="1" class="qty-input">
+                        <button class="qty-btn plus">+</button>
+                    </div>
+                    <button class="add-to-cart">ADD TO CART</button>
+                    <button class="add-to-favorite">❤ ADD TO FAVORITES</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <footer class="footer">
+        <div class="footer-container">
+          <div class="footer-sections">
+            <div class="footer-section">
+              <div class="footer-title">CUSTOMER CARE</div>
+              <ul class="footer-links">
+                <li><a href="#">Shipping Policy</a></li>
+                <li><a href="#">Warranty & Exchange</a></li>
+                <li><a href="#">FAQs</a></li>
+                <li><a href="#">Contact Us</a></li>
+              </ul>
+            </div>
+            
+            <div class="footer-section">
+              <div class="footer-title">COMPANY</div>
+              <ul class="footer-links">
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Careers</a></li>
+                <li><a href="#">Terms of Service</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+              </ul>
+            </div>
+            
+            <div class="footer-section">
+              <div class="footer-title">PAYMENT METHODS</div>
+              <div class="payment-methods">
+                <div class="payment-item">VISA</div>
+                <div class="payment-item">MASTERCARD</div>
+                <div class="payment-item">HONGLEONG BANK</div>
+                <div class="payment-item">HSBC BANK</div>
+                <div class="payment-item">RHB BANK</div>
+                <div class="payment-item">UOB BANK</div>
+                <div class="payment-item">PUBLIC BANK</div>
+                <div class="payment-item">FPX</div>
+                <div class="payment-item">GRAB PAY</div>
+                <div class="payment-item">TOUCH'NGO EWALLET</div>
+                <div class="payment-item">BANKISLAM</div>               
+              </div>
+            </div>
+          </div>
+          
+          <div class="copyright">
+            &copy; 2023 Nexus Components. All Rights Reserved.
+          </div>
+        </div>
+      </footer>
+    <script src="favorite.js"></script>
+    <script src="product-details.js"></script>
+</body>
+</html>

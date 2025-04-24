@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>GPU List with Popups</title>
+    <link rel="stylesheet" href="gpu-list.css">
+</head>
+<body>
+    <header>
+        <div class="logo-title-container">
+            <a href="home.html"><img src="comp-logo.jpg" alt="Company Logo" class="logo"></a>
+            <h1>Nexus Components</h1>
+        </div>
+        <div class="favorite-container">
+            <div class="favorite-icon" id="favorite-icon">
+                ♡
+                <span class="favorite-count">0</span>
+            </div>
+            <div class="favorite-dropdown" id="favorite-dropdown">
+                <div class="favorite-items-container">
+                    <h3>Your Favorites</h3>
+                    <div class="favorite-items-list" id="favorite-items-list">
+                        <p class="empty-favorite-message">Your favorites list is empty</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="cart-container">
+            <div class="cart-icon" id="cart-icon">
+                🛒
+                <span class="cart-count">0</span>
+            </div>
+            <div class="cart-dropdown" id="cart-dropdown">
+                <div class="cart-items-container">
+                    <h3>Your Cart</h3>
+                    <div class="cart-items-list" id="cart-items-list">
+                        <p class="empty-cart-message">Your cart is empty</p>
+                    </div>
+                    <div class="cart-total">
+                        <span>Total: RM</span>
+                        <span id="cart-total-price">0.00</span>
+                    </div>
+                    <button class="checkout-btn">Checkout</button>
+                </div>
+            </div>
+        </div>
+    </header>
+    <nav class="pc-parts-nav">
+        <ul>
+          <li><a href="cpu.html"><img src="images-nav/cpu.avif" alt="Processor">PROCESSORS</a></li>
+          <li><a href="gpu-list.html"><img src="images-nav/Graphic_card.avif" alt="GRAPHICS CARD">GRAPHIC CARDS</a></li>
+          <li><a href="motherboard.html"><img src="images-nav/mobo.avif" alt="Motherboard">MOTHERBOARDS</a></li>
+          <li><a href="ram.html"><img src="images-nav/RAM_v5.avif" alt="RAM">RAM</a></li>
+          <li><a href="psu.html"><img src="images-nav/RGB_Power_Supply.avif" alt="PSU">POWER SUPPLY UNIT</a></li>
+          <li><a href="case.html"><img src="images-nav/PC_casing.avif" alt="Case">PC CASING</a></li>
+        </ul>
+    </nav>
+    <main>
+        <div class="gpu-list">
+            <ul>
+                <li data-badge="BEST REVIEW">
+                    <a href="#popup-DeepCool">
+                        <div class="gpu-image-container"><img src="img-psu/psu.webp" alt="DeepCool"></div>
+                        <div class="gpu-content"><h2>DeepCool PK450D (450W) Power Supply (PSU)</h2></div>
+                        <div class="gpu-price">RM199.00</div>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#popup-Gamdias-Kratos-E1">
+                        <div class="gpu-image-container"><img src="img-psu/psu1.webp" alt="Gamdias Kratos E1"></div>
+                        <div class="gpu-content"><h2>Gamdias Kratos E1 RGB (500W) Power Supply</h2></div>
+                        <div class="gpu-price">RM159.00</div>
+                    </a>
+                </li>    
+
+                <li data-badge="BEST RATING">
+                    <a href="#popup-Thermaltake">
+                        <div class="gpu-image-container"><img src="img-psu/psu2.webp" alt="Thermaltake "></div>
+                        <div class="gpu-content"><h2>Thermaltake LitePower 450W (LTP-0450P-2) Power Supply (PSU)</h2></div>
+                        <div class="gpu-price">RM49.00</div>
+                    </a>
+                </li>
+
+                <li data-badge="BEST SELLER">
+                    <a href="#popup-GIGABYTE-GP">
+                        <div class="gpu-image-container"><img src="img-psu/psu3.png" alt="GIGABYTE GP"></div>
+                        <div class="gpu-content"><h2>GIGABYTE GP-P550SS (550W)</h2></div>
+                        <div class="gpu-price">RM209.00</div>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#popup-Aerocool-LUX">
+                        <div class="gpu-image-container"><img src="img-psu/psu4.webp" alt="Aerocool LUX"></div>
+                        <div class="gpu-content"><h2>Aerocool LUX RGB 80Plus Bronze Power Supply PSU (650W)</h2></div>
+                        <div class="gpu-price">RM219.00</div>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#popup-Gamdias">
+                        <div class="gpu-image-container"><img src="img-psu/psu5.webp" alt="Gamdias"></div>
+                        <div class="gpu-content"><h2>Gamdias Kratos M1 RGB (600W) Power Supply</h2></div>
+                        <div class="gpu-price">RM259.00</div>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#popup-Gamdias-HELIOS">
+                        <div class="gpu-image-container"><img src="img-psu/psu6.webp" alt="Gamdias HELIOS"></div>
+                        <div class="gpu-content"><h2>Gamdias HELIOS E1-500 (500W) Power Supply</h2></div>
+                        <div class="gpu-price">RM159.00</div>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#popup-ASUS-TUF">
+                        <div class="gpu-image-container"><img src="img-psu/psu7.webp" alt="ASUS TUF"></div>
+                        <div class="gpu-content"><h2>ASUS TUF (750W) Power Supply</h2></div>
+                        <div class="gpu-price">RM759.00</div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </main>
+    
+    <div id="popup-DeepCool" class="product-popup-overlay">
+        <div class="product-popup">
+            <a href="#" class="close-popup">&times;</a>
+            <div class="product-image-container">
+                <img src="img-psu/psu.webp" alt="DeepCool">
+            </div>
+            <div class="product-details">
+                <h1 class="product-title">DeepCool Power Supply (PSU)</h1>
+                <div class="product-model">PK450D (450W)</div>
+                <div class="warranty">[2 Years Warranty]</div>
+                
+                <div class="price">RM199.00</div>
+                <div class="info">
+                    <div class="shipping-notice">Shipping calculated at checkout.</div>
+                    <div class="availability in-stock">Availability: In Stock</div>
+                </div>
+                <div class="specs">
+                    <h3>Technical Specifications:</h3>
+                    <div class="spec-item">
+                        <span class="spec-name">Certified:</span>
+                        <span class="spec-value">80+ Bronze</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-name">Efficiency:</span>
+                        <span class="spec-value">≥85% Under Typical Load(50% Loading)</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-name">FAN:</span>
+                        <span class="spec-value">120mm Hydro Bearing</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-name">PFC:</span>
+                        <span class="spec-value">Active PFC+DC to DC</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-name">Dimension:</span>
+                        <span class="spec-value">150 x 140 x 86 mm</span>
+                    </div>
+                </div>
+                
+                <div class="action-buttons">
+                    <div class="quantity-selector">
+                        <button class="qty-btn minus">-</button>
+                        <input type="number" value="1" min="1" class="qty-input">
+                        <button class="qty-btn plus">+</button>
+                    </div>
+                    <button class="add-to-cart">ADD TO CART</button>
+                    <button class="add-to-favorite">❤ ADD TO FAVORITES</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="popup-Gamdias-Kratos-E1" class="product-popup-overlay">
+        <div class="product-popup">
+            <a href="#" class="close-popup">&times;</a>
+            <div class="product-image-container">
+                <img src="img-psu/psu1.webp" alt="Gamdias Kratos E1">
+            </div>
+            <div class="product-details">
+                <h1 class="product-title">Gamdias Kratos E1 Power Supply</h1>
+                <div class="product-model">Power Supply Non-Modular RGB (500W)</div>
+                <div class="warranty">[2 Years Warranty]</div>
+
+                <div class="price">RM159.00</div>
+                <div class="info">
+                    <div class="shipping-notice">Shipping calculated at checkout.</div>
+                    <div class="availability in-stock">Availability: In Stock</div>
+                </div>
+                <div class="specs">
+                    <h3>Technical Specifications:</h3>
+                    <div class="spec-item">
+                        <span class="spec-name">Efficiency:</span>
+                        <span class="spec-value">Meet 80% efficiency</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-name">Support Motherboard RGB Sync Connectors:</span>
+                        <span class="spec-value">5V 3-pin Addressable (Digital) LED RGB Header Only</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-name">Support power state:</span>
+                        <span class="spec-value">C6/C7 power state</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-name">Protection:</span>
+                        <span class="spec-value">UVP/ OPP/ SCP</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-name">Type:</span>
+                        <span class="spec-value">ATX12V v2.4</span>
+                    </div>
+                </div>
+                
+                <div class="action-buttons">
+                    <div class="quantity-selector">
+                        <button class="qty-btn minus">-</button>
+                        <input type="number" value="1" min="1" class="qty-input">
+                        <button class="qty-btn plus">+</button>
+                    </div>
+                    <button class="add-to-cart">ADD TO CART</button>
+                    <button class="add-to-favorite">❤ ADD TO FAVORITES</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="popup-Thermaltake" class="product-popup-overlay">
+        <div class="product-popup">
+            <a href="#" class="close-popup">&times;</a>
+            <div class="product-image-container">
+                <img src="img-psu/psu2.webp" alt="Thermaltake">
+            </div>
+            <div class="product-details">
+                <h1 class="product-title">Thermaltake Power Supply (PSU)</h1>
+                <div class="product-model">LitePower 450W (LTP-0450P-2)</div>
+                <div class="warranty">[2 Years Warranty]</div>
+
+                <div class="price">RM149.00</div>
+                <div class="info">
+                    <div class="shipping-notice">Shipping calculated at checkout.</div>
+                    <div class="availability in-stock">Availability: In Stock</div>
+                </div>
+                <div class="specs">
+                    <h3>Technical Specifications:</h3>
+                    <div class="spec-item">
+                        <span class="spec-name">Model:</span>
+                        <span class="spec-value">LTP-450AL2NK</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-name">Dimension:</span>
+                        <span class="spec-value">150mm x 86mm x 140mm</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-name">Type:</span>
+                        <span class="spec-value">ATX 12V 2.3</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-name">FAN:</span>
+                        <span class="spec-value">No</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-name">Form Factor:</span>
+                        <span class="spec-value">ATX</span>
+                    </div>
+                </div>
+                
+                <div class="action-buttons">
+                    <div class="quantity-selector">
+                        <button class="qty-btn minus">-</button>
+                        <input type="number" value="1" min="1" class="qty-input">
+                        <button class="qty-btn plus">+</button>
+                    </div>
+                    <button class="add-to-cart">ADD TO CART</button>
+                    <button class="add-to-favorite">❤ ADD TO FAVORITES</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="popup-GIGABYTE-GP" class="product-popup-overlay">
+        <div class="product-popup">
+            <a href="#" class="close-popup">&times;</a>
+            <div class="product-image-container">
+                <img src="img-psu/psu3.png" alt="GIGABYTE GP">
+            </div>
+            <div class="product-details">
+                <h1 class="product-title">GIGABYTE GP Power Supply</h1>
+                <div class="product-model">P550SS (550W)</div>
+                <div class="warranty">[2 Years Warranty]</div>
+
+                <div class="price">RM249.00</div>
+                <div class="info">
+                    <div class="shipping-notice">Shipping calculated at checkout.</div>
+                    <div class="availability in-stock">Availability: In Stock</div>
+                </div>
+                <div class="specs">
+                    <h3>Technical Specifications:</h3>
+                    <div class="spec-item">
+                        <span class="spec-name">PFC:</span>
+                        <span class="spec-value">Active PFC (>0.9 typical)</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-name">Efficiency:</span>
+                        <span class="spec-value"> 90% at typical load (230V EU)</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-name">MTBF:</span>
+                        <span class="spec-value">>100,000 hours</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-name">Dimensions:</span>
+                        <span class="spec-value">150 x 140 x 86 mm</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-name">FAN:</span>
+                        <span class="spec-value">120mm Fluid Dynamic Bearing (FDB) fan</span>
+                    </div>
+                </div>
+                
+                <div class="action-buttons">
+                    <div class="quantity-selector">
+                        <button class="qty-btn minus">-</button>
+                        <input type="number" value="1" min="1" class="qty-input">
+                        <button class="qty-btn plus">+</button>
+                    </div>
+                    <button class="add-to-cart">ADD TO CART</button>
+                    <button class="add-to-favorite">❤ ADD TO FAVORITES</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="popup-Aerocool-LUX" class="product-popup-overlay">
+        <div class="product-popup">
+            <a href="#" class="close-popup">&times;</a>
+            <div class="product-image-container">
+                <img src="img-psu/psu4.webp" alt="Aerocool LUX">
+            </div>
+            <div class="product-details">
+                <h1 class="product-title">Aerocool LUX RGB Power Supply</h1>
+                <div class="product-model">PSU (650W)</div>
+                <div class="warranty">[2 Years Warranty]</div>
+
+                <div class="price">RM219.00</div>
+                <div class="info">
+                    <div class="shipping-notice">Shipping calculated at checkout.</div>
+                    <div class="availability in-stock">Availability: In Stock</div>
+                </div>
+                <div class="specs">
+                    <h3>Technical Specifications:</h3>
+                    <div class="spec-item">
+                        <span class="spec-name">Speeds:</span>
+                        <span class="spec-value">8000 MT/s</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-name">Protection:</span>
+                        <span class="spec-value">OPP/OVP/UVP/SCP</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-name">MTBF:</span>
+                        <span class="spec-value">>100,000 hours</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-name">Dimensions:</span>
+                        <span class="spec-value">150 x 140 x 86 mm</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-name">FAN:</span>
+                        <span class="spec-value">Silent 12cm black fan</span>
+                    </div>
+                </div>
+                
+                <div class="action-buttons">
+                    <div class="quantity-selector">
+                        <button class="qty-btn minus">-</button>
+                        <input type="number" value="1" min="1" class="qty-input">
+                        <button class="qty-btn plus">+</button>
+                    </div>
+                    <button class="add-to-cart">ADD TO CART</button>
+                    <button class="add-to-favorite">❤ ADD TO FAVORITES</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="popup-Gamdias" class="product-popup-overlay">
+        <div class="product-popup">
+            <a href="#" class="close-popup">&times;</a>
+            <div class="product-image-container">
+                <img src="img-psu/psu5.webp" alt="Gamdias">
+            </div>
+            <div class="product-details">
+                <h1 class="product-title">Gamdias Kratos Power Supply</h1>
+                <div class="product-model">Non-Modular RGB (600W)</div>
+                <div class="warranty">[2 Years Warranty]</div>
+
+                <div class="price">RM259.00</div>
+                <div class="info">
+                    <div class="shipping-notice">Shipping calculated at checkout.</div>
+                    <div class="availability in-stock">Availability: In Stock</div>
+                </div>
+                <div class="specs">
+                    <h3>Technical Specifications:</h3>
+                    <div class="spec-item">
+                        <span class="spec-name">Type:</span>
+                        <span class="spec-value">ATX12V v2.4</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-name">Protection:</span>
+                        <span class="spec-value">OPP/OVP/UVP/SCP</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-name">Efficiency:</span>
+                        <span class="spec-value">Meet 80 PLUS Bronze efficiency</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-name">Support Motherboard:</span>
+                        <span class="spec-value">Motherboard RGB Sync Connectors 5V 3-pin Addressable (Digital) LED RGB Header Only</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-name">Support power state:</span>
+                        <span class="spec-value">C6/C7</span>
+                    </div>
+                </div>
+                
+                <div class="action-buttons">
+                    <div class="quantity-selector">
+                        <button class="qty-btn minus">-</button>
+                        <input type="number" value="1" min="1" class="qty-input">
+                        <button class="qty-btn plus">+</button>
+                    </div>
+                    <button class="add-to-cart">ADD TO CART</button>
+                    <button class="add-to-favorite">❤ ADD TO FAVORITES</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="popup-Gamdias-HELIOS" class="product-popup-overlay">
+        <div class="product-popup">
+            <a href="#" class="close-popup">&times;</a>
+            <div class="product-image-container">
+                <img src="img-psu/psu6.webp" alt="Gamdias HELIOS">
+            </div>
+            <div class="product-details">
+                <h1 class="product-title">Gamdias HELIOS E1 Power Supply</h1>
+                <div class="product-model"> Non-Modular ATX12V v2.4 (500W)</div>
+                <div class="warranty">[2 Years Warranty]</div>
+
+                <div class="price">RM159.00</div>
+                <div class="info">
+                    <div class="shipping-notice">Shipping calculated at checkout.</div>
+                    <div class="availability in-stock">Availability: In Stock</div>
+                </div>
+                <div class="specs">
+                    <h3>Technical Specifications:</h3>
+                    <div class="spec-item">
+                        <span class="spec-name">Max. Output Current:</span>
+                        <span class="spec-value">15A</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-name">Protection:</span>
+                        <span class="spec-value">OPP/OVP/UVP/SCP</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-name">Efficiency:</span>
+                        <span class="spec-value">Meeting up to 80% efficiency</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-name">Dimensions:</span>
+                        <span class="spec-value">140 x 150 x 86 mm</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-name">Support power state:</span>
+                        <span class="spec-value">C6/C7</span>
+                    </div>
+                </div>
+                
+                <div class="action-buttons">
+                    <div class="quantity-selector">
+                        <button class="qty-btn minus">-</button>
+                        <input type="number" value="1" min="1" class="qty-input">
+                        <button class="qty-btn plus">+</button>
+                    </div>
+                    <button class="add-to-cart">ADD TO CART</button>
+                    <button class="add-to-favorite">❤ ADD TO FAVORITES</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="popup-ASUS-TUF" class="product-popup-overlay">
+        <div class="product-popup">
+            <a href="#" class="close-popup">&times;</a>
+            <div class="product-image-container">
+                <img src="img-psu/psu7.webp" alt="ASUS TUF">
+            </div>
+            <div class="product-details">
+                <h1 class="product-title">ASUS TUF Power Supply</h1>
+                <div class="product-model">Fully Modular Power Supply PSU (750W)</div>
+                <div class="warranty">[2 Years Warranty]</div>
+
+                <div class="price">RM759.00</div>
+                <div class="info">
+                    <div class="shipping-notice">Shipping calculated at checkout.</div>
+                    <div class="availability in-stock">Availability: In Stock</div>
+                </div>
+                <div class="specs">
+                    <h3>Technical Specifications:</h3>
+                    <div class="spec-item">
+                        <span class="spec-name">Efficiency:</span>
+                        <span class="spec-value">92% Typically</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-name">Protection:</span>
+                        <span class="spec-value">OPP/OVP/UVP/SCP</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-name">MTBF:</span>
+                        <span class="spec-value">>120,000 hrs</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-name">Dimensions:</span>
+                        <span class="spec-value">150 x 150 x 86 mm</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-name">Input Voltage:</span>
+                        <span class="spec-value">100-240Vac</span>
+                    </div>
+                </div>
+                
+                <div class="action-buttons">
+                    <div class="quantity-selector">
+                        <button class="qty-btn minus">-</button>
+                        <input type="number" value="1" min="1" class="qty-input">
+                        <button class="qty-btn plus">+</button>
+                    </div>
+                    <button class="add-to-cart">ADD TO CART</button>
+                    <button class="add-to-favorite">❤ ADD TO FAVORITES</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <footer class="footer">
+        <div class="footer-container">
+          <div class="footer-sections">
+            <div class="footer-section">
+              <div class="footer-title">CUSTOMER CARE</div>
+              <ul class="footer-links">
+                <li><a href="#">Shipping Policy</a></li>
+                <li><a href="#">Warranty & Exchange</a></li>
+                <li><a href="#">FAQs</a></li>
+                <li><a href="#">Contact Us</a></li>
+              </ul>
+            </div>
+            
+            <div class="footer-section">
+              <div class="footer-title">COMPANY</div>
+              <ul class="footer-links">
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Careers</a></li>
+                <li><a href="#">Terms of Service</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+              </ul>
+            </div>
+            
+            <div class="footer-section">
+              <div class="footer-title">PAYMENT METHODS</div>
+              <div class="payment-methods">
+                <div class="payment-item">VISA</div>
+                <div class="payment-item">MASTERCARD</div>
+                <div class="payment-item">HONGLEONG BANK</div>
+                <div class="payment-item">HSBC BANK</div>
+                <div class="payment-item">RHB BANK</div>
+                <div class="payment-item">UOB BANK</div>
+                <div class="payment-item">PUBLIC BANK</div>
+                <div class="payment-item">FPX</div>
+                <div class="payment-item">GRAB PAY</div>
+                <div class="payment-item">TOUCH'NGO EWALLET</div>
+                <div class="payment-item">BANKISLAM</div>               
+              </div>
+            </div>
+          </div>
+          
+          <div class="copyright">
+            &copy; 2023 Nexus Components. All Rights Reserved.
+          </div>
+        </div>
+      </footer>
+    <script src="favorite.js"></script>
+    <script src="product-details.js"></script>
+</body>
+</html>

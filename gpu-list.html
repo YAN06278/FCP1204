@@ -1,0 +1,864 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GPU List with Popups</title>
+    <link rel="stylesheet" href="gpu-list.css">
+</head>
+<body>
+    <header>
+        <div class="logo-title-container">
+            <a href="home.html"><img src="comp-logo.jpg" alt="Company Logo" class="logo"></a>
+            <h1>Nexus Components</h1>
+        </div>
+        <div class="favorite-container">
+            <div class="favorite-icon" id="favorite-icon">
+                ♡
+                <span class="favorite-count">0</span>
+            </div>
+            <div class="favorite-dropdown" id="favorite-dropdown">
+                <div class="favorite-items-container">
+                    <h3>Your Favorites</h3>
+                    <div class="favorite-items-list" id="favorite-items-list">
+                        <p class="empty-favorite-message">Your favorites list is empty</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="cart-container">
+            <div class="cart-icon" id="cart-icon">
+                🛒
+                <span class="cart-count">0</span>
+            </div>
+            <div class="cart-dropdown" id="cart-dropdown">
+                <div class="cart-items-container">
+                    <h3>Your Cart</h3>
+                    <div class="cart-items-list" id="cart-items-list">
+                        <p class="empty-cart-message">Your cart is empty</p>
+                    </div>
+                    <div class="cart-total">
+                        <span>Total: RM</span>
+                        <span id="cart-total-price">0.00</span>
+                    </div>
+                    <button class="checkout-btn">Checkout</button>
+                </div>
+            </div>
+        </div>
+    </header>
+    <nav class="pc-parts-nav">
+        <ul>
+          <li><a href="cpu.html"><img src="images-nav/cpu.avif" alt="Processor">PROCESSORS</a></li>
+          <li><a href="gpu-list.html"><img src="images-nav/Graphic_card.avif" alt="GRAPHICS CARD">GRAPHIC CARDS</a></li>
+          <li><a href="motherboard.html"><img src="images-nav/mobo.avif" alt="Motherboard">MOTHERBOARDS</a></li>
+          <li><a href="ram.html"><img src="images-nav/RAM_v5.avif" alt="RAM">RAM</a></li>
+          <li><a href="psu.html"><img src="images-nav/RGB_Power_Supply.avif" alt="PSU">POWER SUPPLY UNIT</a></li>
+          <li><a href="case.html"><img src="images-nav/PC_casing.avif" alt="Case">PC CASING</a></li>
+        </ul>
+    </nav>
+    <main>
+        <div class="gpu-list">
+            <ul>
+                <li data-badge="BEST SELLER">
+                    <a href="#popup-giga-rtx4060gaming">
+                        <div class="gpu-image-container"><img src="images-gpu/GIGABYTE-GamingOC-RTX4060OC8G.webp" alt="GIGABYTE"></div>
+                        <div class="gpu-content"><h2>GIGABYTE GeForce RTX­­ 4060 GAMING OC 8G GDDR6 Graphics Card | GV-N4060GAMING OC-8GD</h2></div>
+                        <div class="gpu-price">RM1599.00</div>
+                    </a>
+                </li>
+                
+                <li data-badge="BEST RATING">
+                    <a href="#popup-giga-rtx4060windforce">
+                        <div class="gpu-image-container"><img src="images-gpu/GIGABYTE-WindforceRTX4060OC8G.webp" alt="GIGABYTE"></div>
+                        <div class="gpu-content"><h2>GIGABYTE GeForce RTX 4060 WINDFORCE OC 8G GDDR6 Graphics Card | GV-N4060WF2OC-8GD</h2></div>
+                        <div class="gpu-price">RM1469.00</div>
+                    </a>
+                </li>
+                
+                <li>
+                    <a href="#popup-giga-rtx3050windforce">
+                        <div class="gpu-image-container"><img src="images-gpu/GIGABYTE-WindforeOC-RTX30506GOC.webp" alt="GIGABYTE"></div>
+                        <div class="gpu-content"><h2>GIGABYTE GeForce RTX 3050 WINDFORCE OC 6GB GDDR6 Graphics Card | GV-N3050WF2OCV2-6GD</h2></div>
+                        <div class="gpu-price">RM869.00</div>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#popup-giga-rx7600xtgaming">
+                        <div class="gpu-image-container"><img src="images-gpu/GIGABYTE-AMD-GAMINGRX7600XT16GB.webp" alt="GIGABYTE"></div>
+                        <div class="gpu-content"><h2>GIGABYTE GAMING AMD Radeon™ RX 7600 XT 16GB GDDR6 Graphics Card | GV-R76XTGAMING OC-16GD</h2></div>
+                        <div class="gpu-price">RM1759.00</div>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#popup-giga-rtx4060aero">
+                        <div class="gpu-image-container"><img src="images-gpu/GIGABYTE-AERO-RTX4060AEROOC8G.webp" alt="GIGABYTE"></div>
+                        <div class="gpu-content"><h2>GIGABYTE GeForce RTX 4060 AERO OC 8GB GDDR6 Graphics Card | GV-N4060AERO OC-8GD</h2></div>
+                        <div class="gpu-price">RM1699.00</div>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#popup-asus-rx7800xtDual">
+                        <div class="gpu-image-container"><img src="images-gpu/ASUS-AMD-DUAL-RX7800XT-O16G.webp" alt="ASUS"></div>
+                        <div class="gpu-content"><h2>ASUS Dual AMD Radeon RX 7800 XT OC Edition 16GB GDDR6 Graphics Card (GPU) | DUAL-RX7800XT-O16G</h2></div>
+                        <div class="gpu-price">RM2499.00</div>
+                    </a>
+
+                 <li>
+                    <a href="#popup-asus-rtx4060evoDual">
+                        <div class="gpu-image-container"><img src="images-gpu/ASUS-DUALRTX4060OC8GEVO.webp" alt="ASUS"></div>
+                        <div class="gpu-content"><h2>ASUS Dual GeForce RTX 4060 EVO OC Edition 8GB GDDR6 Graphics Card (GPU) | DUAL-RTX4060-O8G-EVO</h2></div>
+                        <div class="gpu-price">RM1599.00</div>
+                    </a>
+                 </li>
+
+                 <li>
+                    <a href="#popup-asus-rtx4060evoDualwhite">
+                        <div class="gpu-image-container"><img src="images-gpu/ASUS-DualGeForceRTX4060EVO8GWhite.webp" alt="ASUS"></div>
+                        <div class="gpu-content"><h2>ASUS Dual GeForce RTX 4060 EVO OC 8GB GDDR6 Graphics Card | DUAL-RTX4060-O8G-EVO-WHITE</h2></div>
+                        <div class="gpu-price">RM1599.00</div>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#popup-acer-rx7800xt">
+                        <div class="gpu-image-container"><img src="images-gpu/ACER-NITRO-AMD-RX7800XTOC16G.webp" alt="ACER"></div>
+                        <div class="gpu-content"><h2>ACER Nitro AMD Radeon™ RX 7800 XT OC 16G GDDR6 Graphics Card | DP.Z37WW.P01</h2></div>
+                        <div class="gpu-price">RM2799.00</div>
+                    </a>
+                </li>
+
+                <li data-badge="BEST REVIEW">
+                    <a href="#popup-palit-rtx5070infinity">
+                        <div class="gpu-image-container"><img src="images-gpu/PALIT-Infinity3-RTX507012G.webp" alt="PALIT"></div>
+                        <div class="gpu-content"><h2>PALIT GeForce RTX 5070 INFINITY 3 12GB GDDR7 Graphics Card | NE75070019K9-GB2050S</h2></div>
+                        <div class="gpu-price">RM2899.00</div>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#popup-pny-rtx5080triple">
+                        <div class="gpu-image-container"><img src="images-gpu/PNY-RTX508016G.webp" alt="PNY"></div>
+                        <div class="gpu-content"><h2>PNY GeForce RTX 5080 Triple Fan 16GB GDDR7 Graphics Card | VCG508016TFXPB1</h2></div>
+                        <div class="gpu-price">RM6099.00</div>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#popup-pny-rtx5080tripleOC">
+                        <div class="gpu-image-container"><img src="images-gpu/PNY-RTX508016GOC.webp" alt="PNY"></div>
+                        <div class="gpu-content"><h2>PNY GeForce RTX 5080 Triple Fan OC 16GB GDDR7 Graphics Card | VCG508016TFXPB1-O</h2></div>
+                        <div class="gpu-price">RM6299.00</div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </main>
+    
+    <!-- POPUP SECTIONS -->
+
+    <div id="popup-giga-rtx4060gaming" class="product-popup-overlay">
+        <div class="product-popup">
+            <a href="#" class="close-popup">&times;</a>
+            <div class="product-image-container">
+                <img src="images-gpu(popout)/1.webp" alt="GIGABYTE RTX 4060 Gaming">
+            </div>
+            <div class="product-details">
+                <h1 class="product-title">GIGABYTE RTX 4060 GAMING OC 8G GDDR6</h1>
+                <div class="product-model">GV-N4060GAMING OC-8GD</div>
+                <div class="warranty">[2 Years Warranty]</div>
+                
+                <div class="price">RM1599.00</div>
+                <div class="info">
+                    <div class="shipping-notice">Shipping calculated at checkout.</div>
+                    <div class="availability in-stock">Availability: In Stock</div>
+                </div>
+                <div class="specs">
+                    <h3>Technical Specifications:</h3>
+                    <div class="spec-item">
+                        <span class="spec-name">GRAPHICS PROCESSING:</span>
+                        <span class="spec-value">GeForce RTX™ 4060</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-name">CORE CLOCK:</span>
+                        <span class="spec-value">2550 MHz (Reference card: 2460 MHz)</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-name">CUDA CORES:</span>
+                        <span class="spec-value">3072</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-name">MEMORY CLOCK:</span>
+                        <span class="spec-value">17 Gbps</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-name">MEMORY SIZE:</span>
+                        <span class="spec-value">8GB GDDR6</span>
+                    </div>
+                </div>
+                
+                <div class="action-buttons">
+                    <div class="quantity-selector">
+                        <button class="qty-btn minus">-</button>
+                        <input type="number" value="1" min="1" class="qty-input">
+                        <button class="qty-btn plus">+</button>
+                    </div>
+                    <button class="add-to-cart">ADD TO CART</button>
+                    <button class="add-to-favorite">❤ ADD TO FAVORITES</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div id="popup-giga-rtx4060windforce" class="product-popup-overlay">
+        <div class="product-popup">
+            <a href="#" class="close-popup">&times;</a>
+            <div class="product-image-container">
+                <img src="images-gpu(popout)/3.png" alt="GIGABYTE RTX 4060 Windforce">
+            </div>
+            <div class="product-details">
+                <h1 class="product-title">GIGABYTE GeForce RTX 4060 WINDFORCE OC 8G GDDR6 Graphics Card</h1>
+                <div class="product-model">GV-N4060WF2OC-8GD</div>
+                <div class="warranty">[2 Years Warranty]</div>
+                
+                <div class="price">RM1469.00</div>
+                <div class="info">
+                    <div class="shipping-notice">Shipping calculated at checkout.</div>
+                    <div class="availability in-stock">Availability: In Stock</div>
+                </div>
+                <div class="specs">
+                    <h3>Technical Specifications:</h3>
+                    <div class="spec-item">
+                        <span class="spec-name">GRAPHICS PROCESSING:</span>
+                        <span class="spec-value">GeForce RTX™ 4060</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-name">CORE CLOCK:</span>
+                        <span class="spec-value">2475 MHz (Reference card: 2460 MHz)</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-name">CUDA CORES:</span>
+                        <span class="spec-value">3072</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-name">MEMORY CLOCK:</span>
+                        <span class="spec-value">17 Gbps</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-name">MEMORY SIZE:</span>
+                        <span class="spec-value">8GB GDDR6</span>
+                    </div>
+                </div>
+                
+                <div class="action-buttons">
+                    <div class="quantity-selector">
+                        <button class="qty-btn minus">-</button>
+                        <input type="number" value="1" min="1" class="qty-input">
+                        <button class="qty-btn plus">+</button>
+                    </div>
+                    <button class="add-to-cart">ADD TO CART</button>
+                    <button class="add-to-favorite">❤ ADD TO FAVORITES</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="popup-giga-rtx3050windforce" class="product-popup-overlay">
+        <div class="product-popup">
+            <a href="#" class="close-popup">&times;</a>
+            <div class="product-image-container">
+                <img src="images-gpu(popout)/2.webp" alt="GIGABYTE RTX 4060 Windforce">
+            </div>
+            <div class="product-details">
+                <h1 class="product-title">GIGABYTE GeForce RTX 3050 WINDFORCE OC 6GB GDDR6 Graphics Card</h1>
+                <div class="product-model">GV-N3050WF2OCV2-6GD</div>
+                <div class="warranty">[2 Years Warranty]</div>
+                
+                <div class="price">RM869.00</div>
+                <div class="info">
+                    <div class="shipping-notice">Shipping calculated at checkout.</div>
+                    <div class="availability in-stock">Availability: In Stock</div>
+                </div>
+                <div class="specs">
+                    <h3>Technical Specifications:</h3>
+                    <div class="spec-item">
+                        <span class="spec-name">GRAPHICS PROCESSING:</span>
+                        <span class="spec-value">GeForce RTX™ 3050</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-name">CORE CLOCK:</span>
+                        <span class="spec-value">1477 MHz (Reference Card: 1470 MHz)</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-name">CUDA CORES:</span>
+                        <span class="spec-value">2304</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-name">MEMORY CLOCK:</span>
+                        <span class="spec-value">14000 MHz</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-name">MEMORY SIZE:</span>
+                        <span class="spec-value">6GB GDDR6</span>
+                    </div>
+                </div>
+                
+                <div class="action-buttons">
+                    <div class="quantity-selector">
+                        <button class="qty-btn minus">-</button>
+                        <input type="number" value="1" min="1" class="qty-input">
+                        <button class="qty-btn plus">+</button>
+                    </div>
+                    <button class="add-to-cart">ADD TO CART</button>
+                    <button class="add-to-favorite">❤ ADD TO FAVORITES</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="popup-giga-rx7600xtgaming" class="product-popup-overlay">
+        <div class="product-popup">
+            <a href="#" class="close-popup">&times;</a>
+            <div class="product-image-container">
+                <img src="images-gpu(popout)/4.jpeg" alt="GIGABYTE RTX 4060 Windforce">
+            </div>
+            <div class="product-details">
+                <h1 class="product-title">GIGABYTE GAMING AMD Radeon™ RX 7600 XT 16GB GDDR6 Graphics Card</h1>
+                <div class="product-model">GV-R76XTGAMING OC-16GD</div>
+                <div class="warranty">[2 Years Warranty]</div>
+                
+                <div class="price">RM1759.00</div>
+                <div class="info">
+                    <div class="shipping-notice">Shipping calculated at checkout.</div>
+                    <div class="availability in-stock">Availability: In Stock</div>
+                </div>
+                <div class="specs">
+                    <h3>Technical Specifications:</h3>
+                    <div class="spec-item">
+                        <span class="spec-name">GRAPHICS PROCESSING:</span>
+                        <span class="spec-value">Radeon™ RX 7600 XT</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-name">CORE CLOCK:</span>
+                        <span class="spec-value">Boost Clock* : up to 2810 MHz (Reference card: 2755 MHz)<br>
+                                                 Game Clock* : up to 2539 MHz (Reference card: 2470 MHz)
+                        </span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-name">STREAM-PROCESSORS:</span>
+                        <span class="spec-value">2304</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-name">MEMORY CLOCK:</span>
+                        <span class="spec-value">18 Gbps</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-name">MEMORY SIZE:</span>
+                        <span class="spec-value">16GB GDDR6</span>
+                    </div>
+                </div>
+                
+                <div class="action-buttons">
+                    <div class="quantity-selector">
+                        <button class="qty-btn minus">-</button>
+                        <input type="number" value="1" min="1" class="qty-input">
+                        <button class="qty-btn plus">+</button>
+                    </div>
+                    <button class="add-to-cart">ADD TO CART</button>
+                    <button class="add-to-favorite">❤ ADD TO FAVORITES</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="popup-giga-rtx4060aero" class="product-popup-overlay">
+        <div class="product-popup">
+            <a href="#" class="close-popup">&times;</a>
+            <div class="product-image-container">
+                <img src="images-gpu(popout)/5.png" alt="GIGABYTE">
+            </div>
+            <div class="product-details">
+                <h1 class="product-title">GIGABYTE GeForce RTX 4060 AERO OC 8GB GDDR6 Graphics Card</h1>
+                <div class="product-model">GV-N4060AERO OC-8GD</div>
+                <div class="warranty">[2 Years Warranty]</div>
+                
+                <div class="price">RM1669.00</div>
+                <div class="info">
+                    <div class="shipping-notice">Shipping calculated at checkout.</div>
+                    <div class="availability in-stock">Availability: In Stock</div>
+                </div>
+                <div class="specs">
+                    <h3>Technical Specifications:</h3>
+                    <div class="spec-item">
+                        <span class="spec-name">GRAPHICS PROCESSING:</span>
+                        <span class="spec-value">GeForce RTX™ 4060</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-name">CORE CLOCK:</span>
+                        <span class="spec-value">2550 MHz (Reference card: 2460 MHz)</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-name">CUDA CORES:</span>
+                        <span class="spec-value">3072</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-name">MEMORY CLOCK:</span>
+                        <span class="spec-value">17 Gbps</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-name">MEMORY SIZE:</span>
+                        <span class="spec-value">8GB GDDR6</span>
+                    </div>
+                </div>
+                
+                <div class="action-buttons">
+                    <div class="quantity-selector">
+                        <button class="qty-btn minus">-</button>
+                        <input type="number" value="1" min="1" class="qty-input">
+                        <button class="qty-btn plus">+</button>
+                    </div>
+                    <button class="add-to-cart">ADD TO CART</button>
+                    <button class="add-to-favorite">❤ ADD TO FAVORITES</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="popup-asus-rx7800xtDual" class="product-popup-overlay">
+        <div class="product-popup">
+            <a href="#" class="close-popup">&times;</a>
+            <div class="product-image-container">
+                <img src="images-gpu(popout)/6.jpg" alt="ASUS">
+            </div>
+            <div class="product-details">
+                <h1 class="product-title">ASUS Dual AMD Radeon RX 7800 XT OC Edition 16GB GDDR6 Graphics Card (GPU)</h1>
+                <div class="product-model">DUAL-RX7800XT-O16G</div>
+                <div class="warranty">[2 Years Warranty]</div>
+                
+                <div class="price">RM2499.00</div>
+                <div class="info">
+                    <div class="shipping-notice">Shipping calculated at checkout.</div>
+                    <div class="availability in-stock">Availability: In Stock</div>
+                </div>
+                <div class="specs">
+                    <h3>Technical Specifications:</h3>
+                    <div class="spec-item">
+                        <span class="spec-name">GRAPHICS PROCESSING:</span>
+                        <span class="spec-value">Radeon™ RX 7800 XT</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-name">CORE CLOCK:</span>
+                        <span class="spec-value">OC mode : up to 2520 MHz (Boost Clock)/up to 2213 MHz (Game Clock)<br>
+                                                 Default mode : up to 2475 MHz (Boost Clock)/up to 2169 MHz (Game Clock)
+                        </span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-name">STREAM-PROCESSORS:</span>
+                        <span class="spec-value">3840</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-name">MEMORY CLOCK:</span>
+                        <span class="spec-value">19.95 Gbps</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-name">MEMORY SIZE:</span>
+                        <span class="spec-value">16GB GDDR6</span>
+                    </div>
+                </div>
+                
+                <div class="action-buttons">
+                    <div class="quantity-selector">
+                        <button class="qty-btn minus">-</button>
+                        <input type="number" value="1" min="1" class="qty-input">
+                        <button class="qty-btn plus">+</button>
+                    </div>
+                    <button class="add-to-cart">ADD TO CART</button>
+                    <button class="add-to-favorite">❤ ADD TO FAVORITES</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="popup-asus-rtx4060evoDual" class="product-popup-overlay">
+        <div class="product-popup">
+            <a href="#" class="close-popup">&times;</a>
+            <div class="product-image-container">
+                <img src="images-gpu(popout)/7.webp" alt="ASUS">
+            </div>
+            <div class="product-details">
+                <h1 class="product-title">ASUS Dual GeForce RTX 4060 EVO OC Edition 8GB GDDR6 Graphics Card (GPU)</h1>
+                <div class="product-model">DUAL-RTX4060-O8G-EVO</div>
+                <div class="warranty">[2 Years Warranty]</div>
+                
+                <div class="price">RM1599.00</div>
+                <div class="info">
+                    <div class="shipping-notice">Shipping calculated at checkout.</div>
+                    <div class="availability in-stock">Availability: In Stock</div>
+                </div>
+                <div class="specs">
+                    <h3>Technical Specifications:</h3>
+                    <div class="spec-item">
+                        <span class="spec-name">GRAPHICS PROCESSING:</span>
+                        <span class="spec-value">Geforce RTX™ 4060</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-name">CORE CLOCK:</span>
+                        <span class="spec-value">OC mode : OC edition: 2535 MHz (Boost Clock) <br>
+                                                 Default mode : 2505 MHz (Boost Clock)
+                        </span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-name">CUDA CORES:</span>
+                        <span class="spec-value">3072</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-name">MEMORY CLOCK:</span>
+                        <span class="spec-value">17 Gbps</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-name">MEMORY SIZE:</span>
+                        <span class="spec-value">8GB GDDR6</span>
+                    </div>
+                </div>
+                
+                <div class="action-buttons">
+                    <div class="quantity-selector">
+                        <button class="qty-btn minus">-</button>
+                        <input type="number" value="1" min="1" class="qty-input">
+                        <button class="qty-btn plus">+</button>
+                    </div>
+                    <button class="add-to-cart">ADD TO CART</button>
+                    <button class="add-to-favorite">❤ ADD TO FAVORITES</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="popup-asus-rtx4060evoDualwhite" class="product-popup-overlay">
+        <div class="product-popup">
+            <a href="#" class="close-popup">&times;</a>
+            <div class="product-image-container">
+                <img src="images-gpu(popout)/8.jpeg" alt="GIGABYTE">
+            </div>
+            <div class="product-details">
+                <h1 class="product-title">ASUS Dual GeForce RTX 4060 EVO OC 8GB GDDR6 Graphics Card</h1>
+                <div class="product-model">DUAL-RTX4060-O8G-EVO-WHITE</div>
+                <div class="warranty">[2 Years Warranty]</div>
+                
+                <div class="price">RM1569.00</div>
+                <div class="info">
+                    <div class="shipping-notice">Shipping calculated at checkout.</div>
+                    <div class="availability in-stock">Availability: In Stock</div>
+                </div>
+                <div class="specs">
+                    <h3>Technical Specifications:</h3>
+                    <div class="spec-item">
+                        <span class="spec-name">GRAPHICS PROCESSING:</span>
+                        <span class="spec-value">GeForce RTX™ 4060</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-name">CORE CLOCK:</span>
+                        <span class="spec-value">OC Mode : 2535 MHz (Boost Clock)<br>
+                                                 Default Mode : 2505 MHz (Boost Clock)
+                        </span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-name">CUDA CORES:</span>
+                        <span class="spec-value">3072</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-name">MEMORY CLOCK:</span>
+                        <span class="spec-value">17 Gbps</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-name">MEMORY SIZE:</span>
+                        <span class="spec-value">8GB GDDR6</span>
+                    </div>
+                </div>
+                
+                <div class="action-buttons">
+                    <div class="quantity-selector">
+                        <button class="qty-btn minus">-</button>
+                        <input type="number" value="1" min="1" class="qty-input">
+                        <button class="qty-btn plus">+</button>
+                    </div>
+                    <button class="add-to-cart">ADD TO CART</button>
+                    <button class="add-to-favorite">❤ ADD TO FAVORITES</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="popup-acer-rx7800xt" class="product-popup-overlay">
+        <div class="product-popup">
+            <a href="#" class="close-popup">&times;</a>
+            <div class="product-image-container">
+                <img src="images-gpu(popout)/9.webp" alt="ACER">
+            </div>
+            <div class="product-details">
+                <h1 class="product-title">ACER Nitro AMD Radeon™ RX 7800 XT OC 16G GDDR6 Graphics Card</h1>
+                <div class="product-model">DP.Z37WW.P01</div>
+                <div class="warranty">[2 Years Warranty]</div>
+                
+                <div class="price">RM2799.00</div>
+                <div class="info">
+                    <div class="shipping-notice">Shipping calculated at checkout.</div>
+                    <div class="availability in-stock">Availability: In Stock</div>
+                </div>
+                <div class="specs">
+                    <h3>Technical Specifications:</h3>
+                    <div class="spec-item">
+                        <span class="spec-name">GRAPHICS PROCESSING:</span>
+                        <span class="spec-value">Radeon™ RX 7800 XT</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-name">CORE CLOCK:</span>
+                        <span class="spec-value">Game Clock : Up to 2170 MHz <br>
+                                                 Boost clock : Up to 2475 MHz
+                        </span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-name">STREAM PROCESSORS:</span>
+                        <span class="spec-value">3840</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-name">MEMORY CLOCK:</span>
+                        <span class="spec-value">19.5 Gbps</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-name">MEMORY SIZE:</span>
+                        <span class="spec-value">16GB GDDR6</span>
+                    </div>
+                </div>
+                
+                <div class="action-buttons">
+                    <div class="quantity-selector">
+                        <button class="qty-btn minus">-</button>
+                        <input type="number" value="1" min="1" class="qty-input">
+                        <button class="qty-btn plus">+</button>
+                    </div>
+                    <button class="add-to-cart">ADD TO CART</button>
+                    <button class="add-to-favorite">❤ ADD TO FAVORITES</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="popup-palit-rtx5070infinity" class="product-popup-overlay">
+        <div class="product-popup">
+            <a href="#" class="close-popup">&times;</a>
+            <div class="product-image-container">
+                <img src="images-gpu(popout)/10.png" alt="PALIT">
+            </div>
+            <div class="product-details">
+                <h1 class="product-title">PALIT GeForce RTX 5070 INFINITY 3 12GB GDDR7 Graphics Card</h1>
+                <div class="product-model">NE75070019K9-GB2050S</div>
+                <div class="warranty">[2 Years Warranty]</div>
+                
+                <div class="price">RM2899.00</div>
+                <div class="info">
+                    <div class="shipping-notice">Shipping calculated at checkout.</div>
+                    <div class="availability in-stock">Availability: In Stock</div>
+                </div>
+                <div class="specs">
+                    <h3>Technical Specifications:</h3>
+                    <div class="spec-item">
+                        <span class="spec-name">GRAPHICS PROCESSING:</span>
+                        <span class="spec-value">Geforce RTX 5070</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-name">CORE CLOCK:</span>
+                        <span class="spec-value">Graphics Clock : Up to 2325 MHz <br>
+                                                 Boost clock : Up to 2512 MHz
+                        </span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-name">CUDA CORES:</span>
+                        <span class="spec-value">6144</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-name">MEMORY CLOCK:</span>
+                        <span class="spec-value">28 Gbps</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-name">MEMORY SIZE:</span>
+                        <span class="spec-value">12GB GDDR6</span>
+                    </div>
+                </div>
+                
+                <div class="action-buttons">
+                    <div class="quantity-selector">
+                        <button class="qty-btn minus">-</button>
+                        <input type="number" value="1" min="1" class="qty-input">
+                        <button class="qty-btn plus">+</button>
+                    </div>
+                    <button class="add-to-cart">ADD TO CART</button>
+                    <button class="add-to-favorite">❤ ADD TO FAVORITES</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="popup-pny-rtx5080triple" class="product-popup-overlay">
+        <div class="product-popup">
+            <a href="#" class="close-popup">&times;</a>
+            <div class="product-image-container">
+                <img src="images-gpu(popout)/11.jpg" alt="PALIT">
+            </div>
+            <div class="product-details">
+                <h1 class="product-title">PNY GeForce RTX 5080 Triple Fan 16GB GDDR7 Graphics Card</h1>
+                <div class="product-model">VCG508016TFXPB1</div>
+                <div class="warranty">[2 Years Warranty]</div>
+                
+                <div class="price">RM6099.00</div>
+                <div class="info">
+                    <div class="shipping-notice">Shipping calculated at checkout.</div>
+                    <div class="availability in-stock">Availability: In Stock</div>
+                </div>
+                <div class="specs">
+                    <h3>Technical Specifications:</h3>
+                    <div class="spec-item">
+                        <span class="spec-name">GRAPHICS PROCESSING:</span>
+                        <span class="spec-value">Geforce RTX 5080</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-name">CORE CLOCK:</span>
+                        <span class="spec-value">Base Clock : Up to 2.30 GHz <br>
+                                                 Boost Clock : Up to 2.78 GHz
+                        </span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-name">CUDA CORES:</span>
+                        <span class="spec-value">10,752</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-name">MEMORY CLOCK:</span>
+                        <span class="spec-value">30 Gbps</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-name">MEMORY SIZE:</span>
+                        <span class="spec-value">16GB GDDR7</span>
+                    </div>
+                </div>
+                
+                <div class="action-buttons">
+                    <div class="quantity-selector">
+                        <button class="qty-btn minus">-</button>
+                        <input type="number" value="1" min="1" class="qty-input">
+                        <button class="qty-btn plus">+</button>
+                    </div>
+                    <button class="add-to-cart">ADD TO CART</button>
+                    <button class="add-to-favorite">❤ ADD TO FAVORITES</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="popup-pny-rtx5080tripleOC" class="product-popup-overlay">
+        <div class="product-popup">
+            <a href="#" class="close-popup">&times;</a>
+            <div class="product-image-container">
+                <img src="images-gpu(popout)/11.jpg" alt="PNY">
+            </div>
+            <div class="product-details">
+                <h1 class="product-title">PNY GeForce RTX 5080 Triple Fan OC 16GB GDDR7 Graphics Card</h1>
+                <div class="product-model">VCG508016TFXPB1-O</div>
+                <div class="warranty">[2 Years Warranty]</div>
+                
+                <div class="price">RM6299.00</div>
+                <div class="info">
+                    <div class="shipping-notice">Shipping calculated at checkout.</div>
+                    <div class="availability in-stock">Availability: In Stock</div>
+                </div>
+                <div class="specs">
+                    <h3>Technical Specifications:</h3>
+                    <div class="spec-item">
+                        <span class="spec-name">GRAPHICS PROCESSING:</span>
+                        <span class="spec-value">Geforce RTX 5080</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-name">CORE CLOCK:</span>
+                        <span class="spec-value">Base Clock : Up to 2.30 GHz <br>
+                                                 Boost Clock : Up to 2.73 GHz
+                        </span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-name">CUDA CORES:</span>
+                        <span class="spec-value">10,752</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-name">MEMORY CLOCK:</span>
+                        <span class="spec-value">30 Gbps</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-name">MEMORY SIZE:</span>
+                        <span class="spec-value">16GB GDDR7</span>
+                    </div>
+                </div>
+                
+                <div class="action-buttons">
+                    <div class="quantity-selector">
+                        <button class="qty-btn minus">-</button>
+                        <input type="number" value="1" min="1" class="qty-input">
+                        <button class="qty-btn plus">+</button>
+                    </div>
+                    <button class="add-to-cart">ADD TO CART</button>
+                    <button class="add-to-favorite">❤ ADD TO FAVORITES</button>    
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <footer class="footer">
+        <div class="footer-container">
+          <div class="footer-sections">
+            <div class="footer-section">
+              <div class="footer-title">CUSTOMER CARE</div>
+              <ul class="footer-links">
+                <li><a href="#">Shipping Policy</a></li>
+                <li><a href="#">Warranty & Exchange</a></li>
+                <li><a href="#">FAQs</a></li>
+                <li><a href="#">Contact Us</a></li>
+              </ul>
+            </div>
+            
+            <div class="footer-section">
+              <div class="footer-title">COMPANY</div>
+              <ul class="footer-links">
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Careers</a></li>
+                <li><a href="#">Terms of Service</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+              </ul>
+            </div>
+            
+            <div class="footer-section">
+              <div class="footer-title">PAYMENT METHODS</div>
+              <div class="payment-methods">
+                <div class="payment-item">VISA</div>
+                <div class="payment-item">MASTERCARD</div>
+                <div class="payment-item">HONGLEONG BANK</div>
+                <div class="payment-item">HSBC BANK</div>
+                <div class="payment-item">RHB BANK</div>
+                <div class="payment-item">UOB BANK</div>
+                <div class="payment-item">PUBLIC BANK</div>
+                <div class="payment-item">FPX</div>
+                <div class="payment-item">GRAB PAY</div>
+                <div class="payment-item">TOUCH'NGO EWALLET</div>
+                <div class="payment-item">BANKISLAM</div>               
+              </div>
+            </div>
+          </div>
+          
+          <div class="copyright">
+            &copy; 2023 Nexus Components. All Rights Reserved.
+          </div>
+        </div>
+      </footer>
+
+    <script src="favorite.js"></script>
+    <script src="product-details.js"></script>
+</body>
+</html>

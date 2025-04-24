@@ -1,0 +1,989 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GPU List with Popups</title>
+    <link rel="stylesheet" href="gpu-list.css">
+</head>
+<body>
+    <header>
+        <div class="logo-title-container">
+            <a href="home.html"><img src="comp-logo.jpg" alt="Company Logo" class="logo"></a>
+            <h1>Nexus Components</h1>
+        </div>
+        <div class="favorite-container">
+            <div class="favorite-icon" id="favorite-icon">
+                ♡
+                <span class="favorite-count">0</span>
+            </div>
+            <div class="favorite-dropdown" id="favorite-dropdown">
+                <div class="favorite-items-container">
+                    <h3>Your Favorites</h3>
+                    <div class="favorite-items-list" id="favorite-items-list">
+                        <p class="empty-favorite-message">Your favorites list is empty</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="cart-container">
+            <div class="cart-icon" id="cart-icon">
+                🛒
+                <span class="cart-count">0</span>
+            </div>
+            <div class="cart-dropdown" id="cart-dropdown">
+                <div class="cart-items-container">
+                    <h3>Your Cart</h3>
+                    <div class="cart-items-list" id="cart-items-list">
+                        <p class="empty-cart-message">Your cart is empty</p>
+                    </div>
+                    <div class="cart-total">
+                        <span>Total: RM</span>
+                        <span id="cart-total-price">0.00</span>
+                    </div>
+                    <button class="checkout-btn">Checkout</button>
+                </div>
+            </div>
+        </div>
+    </header>
+    <nav class="pc-parts-nav">
+        <ul>
+          <li><a href="cpu.html"><img src="images-nav/cpu.avif" alt="Processor">PROCESSORS</a></li>
+          <li><a href="gpu-list.html"><img src="images-nav/Graphic_card.avif" alt="GRAPHICS CARD">GRAPHIC CARDS</a></li>
+          <li><a href="motherboard.html"><img src="images-nav/mobo.avif" alt="Motherboard">MOTHERBOARDS</a></li>
+          <li><a href="ram.html"><img src="images-nav/RAM_v5.avif" alt="RAM">RAM</a></li>
+          <li><a href="psu.html"><img src="images-nav/RGB_Power_Supply.avif" alt="PSU">POWER SUPPLY UNIT</a></li>
+          <li><a href="case.html"><img src="images-nav/PC_casing.avif" alt="Case">PC CASING</a></li>
+        </ul>
+    </nav>
+    <main>
+        <div class="gpu-list">
+            <ul>
+                <li>
+                    <a href="#popup-asrock-x870e">
+                        <div class="gpu-image-container"><img src="image-motherboard/1.webp" alt="ASROCK" height="1000" width="1000"></div>
+                        <div class="gpu-content"><h2>ASROCK X870E TAICHI AM5 ATX Motherboard</h2></div>
+                        <div class="gpu-price">RM2600.00</div>
+                    </a>
+                </li>
+                
+                <li>
+                    <a href="#popup-giga-b650e">
+                        <div class="gpu-image-container"><img src="image-motherboard/2.png" alt="Gigabyte" height="1000" width="1000"></div>
+                        <div class="gpu-content"><h2>Gigabyte B650E Aorus Master</h2></div>
+                        <div class="gpu-price">RM2900.00</div>
+                    </a>
+                </li>
+                        
+                <li>
+                    <a href="#popup-msi-b850">
+                        <div class="gpu-image-container"><img src="image-motherboard/3.png" alt="MSI" height="1000" width="1000"></div>
+                        <div class="gpu-content"><h2>MSI MAG B850 Tomahawk MAX Wifi</h2></div>
+                        <div class="gpu-price">RM1600.00</div>
+                    </a>
+                </li>
+
+                <li data-badge="BEST SELLER">
+                    <a href="#popup-giga-z790">
+                        <div class="gpu-image-container"><img src="image-motherboard/4.png" alt="Gigabyte" height="1000" width="1000"></div>
+                        <div class="gpu-content"><h2>Gigabyte Z790 Aorus Xtreme</h2></div>
+                        <div class="gpu-price">RM2900.00</div>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#popup-asrock-z790-taichi">
+                        <div class="gpu-image-container"><img src="image-motherboard/5.png" alt="ASRock" height="1000" width="1000"></div>
+                        <div class="gpu-content"><h2>ASRock Z790 Taichi Lite</h2></div>
+                        <div class="gpu-price">RM1800.00</div>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#popup-asrock-z790-steel">
+                        <div class="gpu-image-container"><img src="image-motherboard/6.png" alt="ASRock" height="1000" width="1000"></div>
+                        <div class="gpu-content"><h2>ASRock Z790 Steel Legend</h2></div>
+                        <div class="gpu-price">RM2000.00</div>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#popup-msi-x870">
+                        <div class="gpu-image-container"><img src="image-motherboard/7.jpg" alt="MSI" height="1000" width="1000"></div>
+                        <div class="gpu-content"><h2>MSI MAG X870 Tomahawk Wifi</h2></div>
+                        <div class="gpu-price">RM1800.00</div>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#popup-giga-x670">
+                        <div class="gpu-image-container"><img src="image-motherboard/8.jpg" alt="Gigabyte" height="1000" width="1000"></div>
+                        <div class="gpu-content"><h2>Gigabyte X670 Aorus Elite AX</h2></div>
+                        <div class="gpu-price">RM2000.00</div>
+                    </a>
+                </li>
+                <li data-badge="BEST RATING">
+                    <a href="#popup-asus-b650">
+                        <div class="gpu-image-container"><img src="image-motherboard/9.jpg" alt="ASUS" height="1000" width="1000"></div>
+                        <div class="gpu-content"><h2>Asus TUF Gaming B650-Plus WiFi</h2></div>
+                        <div class="gpu-price">RM1700.00</div>
+                    </a>
+                </li> 
+
+                <li>
+                    <a href="#popup-asus-z890">
+                        <div class="gpu-image-container"><img src="image-motherboard/10.jpg" alt="ASUS" height="1000" width="1000"></div>
+                        <div class="gpu-content"><h2>Asus ROG Maximus Z890 Hero</h2></div>
+                        <div class="gpu-price">RM2800.00</div>
+                    </a>
+                </li>
+
+                <li data-badge="BEST REVIEW">
+                    <a href="#popup-msi-z790">
+                        <div class="gpu-image-container"><img src="image-motherboard/11.webp" alt="MSI" height="1000" width="1000"></div>
+                        <div class="gpu-content"><h2>MSI MAG Z790 Tomahawk WiFi</h2></div>
+                        <div class="gpu-price">RM1700.00</div>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#popup-asrock-b760m">
+                        <div class="gpu-image-container"><img src="image-motherboard/12.png" alt="ASRock" height="1000" width="1000"></div>
+                        <div class="gpu-content"><h2>Asrock B760M PG Sonic WiFi</h2></div>
+                        <div class="gpu-price">RM1000.00</div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </main>
+    
+    <!-- POPUP SECTIONS -->
+
+    <div id="popup-asrock-x870e" class="product-popup-overlay">
+        <div class="product-popup">
+            <a href="#" class="close-popup">&times;</a>
+            <div class="product-image-container">
+                <img src="images-motherboard(popout)/1.png" alt="ASROCK">
+            </div>
+            <div class="product-details">
+                <h1 class="product-title">ASROCK X870E TAICHI AM5 ATX Motherboard</h1>
+                <div class="warranty">[2 Years Warranty]</div>
+                
+                <div class="price">RM2600.00</div>
+                <div class="info">
+                    <div class="shipping-notice">Shipping calculated at checkout.</div>
+                    <div class="availability in-stock">Availability: In Stock</div>
+                </div>
+                <div class="specs">
+                    <h3>Technical Specifications:</h3>
+                    <div class="spec-item">
+                        <span class="spec-name">CPU:</span>
+                        <span class="spec-value">- Supports AMD Socket AM5 Ryzen™ 9000, 8000 and 7000 Series Processors<br>
+                                                 - Supports ASRock Hyper BCLK Engine</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-name">CHIPSET:</span>
+                        <span class="spec-value">- AMD X870E</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-name">Memory:</span>
+                        <span class="spec-value">- 4 x DDR5 DIMM Slots<br>
+                                                 - Max. capacity of system memory: 256GB<br>
+                                                 - Supports Extreme Memory Profile (XMP) and EXTended Profiles for Overclocking (EXPO) memory modules
+                        </span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-name">GRAPHICS:</span>
+                        <span class="spec-value">Integrated AMD RDNA™ graphics<br>
+                                                 - 1 x HDMI 2.1 TMDS/FRL 8G Compatible, supports HDR, HDCP 2.3 and max. resolution up to 4K 120Hz<br>
+                                                 - 2 x USB4, support HDCP 2.3 and max. resolution up to 8K 30Hz
+                        </span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-name">AUDIO:</span>
+                        <span class="spec-value">- 5.1 CH HD Audio with Content Protection (Realtek ALC4082 Audio Codec)<br>
+                                                 - WIMA Audio Capacitors (For Rear Outputs)<br>                         
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="action-buttons">
+                    <div class="quantity-selector">
+                        <button class="qty-btn minus">-</button>
+                        <input type="number" value="1" min="1" class="qty-input">
+                        <button class="qty-btn plus">+</button>
+                    </div>
+                    <button class="add-to-cart">ADD TO CART</button>
+                    <button class="add-to-favorite">❤ ADD TO FAVORITES</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div id="popup-giga-b650e" class="product-popup-overlay">
+        <div class="product-popup">
+            <a href="#" class="close-popup">&times;</a>
+            <div class="product-image-container">
+                <img src="images-motherboard(popout)/2.webp" alt="ASROCK">
+            </div>
+            <div class="product-details">
+                <h1 class="product-title">ASROCK X870E TAICHI AM5 ATX Motherboard</h1>
+                <div class="warranty">[2 Years Warranty]</div>
+                
+                <div class="price">RM2900.00</div>
+                <div class="info">
+                    <div class="shipping-notice">Shipping calculated at checkout.</div>
+                    <div class="availability in-stock">Availability: In Stock</div>
+                </div>
+                <div class="specs">
+                    <h3>Technical Specifications:</h3>
+                    <div class="spec-item">
+                        <span class="spec-name">CPU:</span>
+                        <span class="spec-value">- AMD Socket AM5, support for: AMD Ryzen™ 7000 / Ryzen™ 8000 / Ryzen™ 9000 Series Processors</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-name">CHIPSET:</span>
+                        <span class="spec-value">- AMD B650</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-name">MEMORY:</span>
+                        <span class="spec-value">- 4 x DDR5 DIMM sockets supporting up to 256 GB (64 GB single DIMM capacity)<br>
+                                                 - Max. capacity of system memory: 256GB<br>
+                                                 - Support for non-ECC Un-buffered DIMM 1Rx8/2Rx8/1Rx16 memory modules
+                        </span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-name">GRAPHICS:</span>
+                        <span class="spec-value">Integrated Graphics Processor with AMD Radeon™ Graphics support<br>
+                                                 - 1 x HDMI port, supporting a maximum resolution of 7680x4320@60 Hz<br>
+                                                 - Support for HDMI 2.1 version, HDCP 2.3, and HDR
+                        </span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-name">AUDIO:</span>
+                        <span class="spec-value">- Realtek® ALC1220-VB CODEC The front panel line out jack supports DSD audio.<br>
+                                                 - Support for DTS:X® Ultra                         
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="action-buttons">
+                    <div class="quantity-selector">
+                        <button class="qty-btn minus">-</button>
+                        <input type="number" value="1" min="1" class="qty-input">
+                        <button class="qty-btn plus">+</button>
+                    </div>
+                    <button class="add-to-cart">ADD TO CART</button>
+                    <button class="add-to-favorite">❤ ADD TO FAVORITES</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="popup-msi-b850" class="product-popup-overlay">
+        <div class="product-popup">
+            <a href="#" class="close-popup">&times;</a>
+            <div class="product-image-container">
+                <img src="images-motherboard(popout)/3.webp" alt="ASROCK">
+            </div>
+            <div class="product-details">
+                <h1 class="product-title">MSI MAG B850 Tomahawk MAX Wifi</h1>
+                <div class="warranty">[2 Years Warranty]</div>
+                
+                <div class="price">RM1600.00</div>
+                <div class="info">
+                    <div class="shipping-notice">Shipping calculated at checkout.</div>
+                    <div class="availability in-stock">Availability: In Stock</div>
+                </div>
+                <div class="specs">
+                    <h3>Technical Specifications:</h3>
+                    <div class="spec-item">
+                        <span class="spec-name">CPU:</span>
+                        <span class="spec-value">- Supports AMD Ryzen™ 9000/ 8000/ 7000 Series Desktop Processors
+                                                 - Socket AM5</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-name">CHIPSET:</span>
+                        <span class="spec-value">- AMD B850</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-name">MEMORY:</span>
+                        <span class="spec-value">- 4x DDR5 UDIMM, Maximum Memory Capacity 256GB Memory Support DDR5 8400 - 5600 (OC) MT/s / 5600 - 4800 (JEDEC) MT/s<br>
+                                                 - Supports Memory Overclocking and AMD EXPO™<br>
+                                                 - Supports AMD POR Speed and JEDEC Speed
+                        </span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-name">GRAPHICS:</span>
+                        <span class="spec-value">Integrated Graphics Processor with AMD Radeon™ Graphics support<br>
+                                                 - 1 x HDMI port, Support HDMI™ 2.1 FRL, maximum resolution of 8K 60Hz<br>
+                                                 - *Available only on processors featuring integrated graphics. Graphics specifications may vary depending on the CPU installed.
+                        </span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-name">AUDIO:</span>
+                        <span class="spec-value">- Realtek® ALC4080 Codec 7.1-Channel USB High Performance Audio<br>
+                                                 - Supports up to 32-bit/384kHz playback on front panel                         
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="action-buttons">
+                    <div class="quantity-selector">
+                        <button class="qty-btn minus">-</button>
+                        <input type="number" value="1" min="1" class="qty-input">
+                        <button class="qty-btn plus">+</button>
+                    </div>
+                    <button class="add-to-cart">ADD TO CART</button>
+                    <button class="add-to-favorite">❤ ADD TO FAVORITES</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="popup-giga-z790" class="product-popup-overlay">
+        <div class="product-popup">
+            <a href="#" class="close-popup">&times;</a>
+            <div class="product-image-container">
+                <img src="images-motherboard(popout)/4.png" alt="ASROCK">
+            </div>
+            <div class="product-details">
+                <h1 class="product-title">Gigabyte Z790 Aorus Xtreme</h1>
+                <div class="warranty">[2 Years Warranty]</div>
+                
+                <div class="price">RM2900.00</div>
+                <div class="info">
+                    <div class="shipping-notice">Shipping calculated at checkout.</div>
+                    <div class="availability in-stock">Availability: In Stock</div>
+                </div>
+                <div class="specs">
+                    <h3>Technical Specifications:</h3>
+                    <div class="spec-item">
+                        <span class="spec-name">CPU:</span>
+                        <span class="spec-value">- LGA1700 socket: Support for the 14th, 13th, and 12th Generation Intel® Core™, Pentium® Gold and Celeron® Processors*
+                                                 - L3 cache varies with CPU
+                        </span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-name">CHIPSET:</span>
+                        <span class="spec-value">- Intel® Z790 Express Chipset</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-name">MEMORY:</span>
+                        <span class="spec-value">- Support for DDR5 8000(O.C) / 7950(O.C) / 7900(O.C) / 7800(O.C) / 7600(O.C.) / 7400(O.C.) / 7200(O.C.) / 7000(O.C.) / 6800(O.C.) / 6600(O.C.) / 6400(O.C.) / 6200(O.C.) / 6000(O.C.) / 5800(O.C.) / 5600(O.C.) / 5400(O.C.) / 5200(O.C.) / 4800 / 4000 MT/s memory modules<br>
+                                                 - 4 x DDR5 DIMM sockets supporting up to 256 GB (64 GB single DIMM capacity) of system memory<br>
+                                                 - Support for ECC Un-buffered DIMM 1Rx8/2Rx8 memory modules (operate in non-ECC mode)
+                        </span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-name">GRAPHICS:</span>
+                        <span class="spec-value">Integrated Graphics Processor+Intel® Thunderbolt™ 4 Controller<br>
+                                                 - 2 x Intel® Thunderbolt™ 4 connectors (USB Type-C® ports), supporting DisplayPort and Thunderbolt™ video outputs and a maximum resolution of 5120x2880@60 Hz with 24 bpp (via single display output)<br>
+                                                 - Support for DisplayPort 1.4 version and HDCP 2.3
+                        </span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-name">AUDIO:</span>
+                        <span class="spec-value">- ESS ES9280AC DAC chip + 2 ESS ES9080 chips<br>
+                                                 - DTS® Sound Unbound™
+                                                 - High Definition Audio
+                                                 - Support for S/PDIF Out
+                                                 * The line out jack and the optical S/PDIF out connector can only be used one at a time.                        
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="action-buttons">
+                    <div class="quantity-selector">
+                        <button class="qty-btn minus">-</button>
+                        <input type="number" value="1" min="1" class="qty-input">
+                        <button class="qty-btn plus">+</button>
+                    </div>
+                    <button class="add-to-cart">ADD TO CART</button>
+                    <button class="add-to-favorite">❤ ADD TO FAVORITES</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="popup-asrock-z790-taichi" class="product-popup-overlay">
+        <div class="product-popup">
+            <a href="#" class="close-popup">&times;</a>
+            <div class="product-image-container">
+                <img src="images-motherboard(popout)/5.png" alt="ASROCK">
+            </div>
+            <div class="product-details">
+                <h1 class="product-title">ASRock Z790 Taichi Lite</h1>
+                <div class="warranty">[2 Years Warranty]</div>
+                
+                <div class="price">RM1800.00</div>
+                <div class="info">
+                    <div class="shipping-notice">Shipping calculated at checkout.</div>
+                    <div class="availability in-stock">Availability: In Stock</div>
+                </div>
+                <div class="specs">
+                    <h3>Technical Specifications:</h3>
+                    <div class="spec-item">
+                        <span class="spec-name">CPU:</span>
+                        <span class="spec-value">- Supports 14th, 13th & 12th Gen Intel® Core™ Processors (LGA1700)<br>
+                                                 - Supports Intel® Hybrid Technology<br>
+                                                 - Supports Intel® Turbo Boost Max 3.0 Technology<br>
+                                                 - Supports Intel® Thermal Velocity Boost (TVB)
+                        </span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-name">CHIPSET:</span>
+                        <span class="spec-value">- Intel® Z790</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-name">MEMORY:</span>
+                        <span class="spec-value">- Dual Channel DDR5 Memory Technology<br>
+                                                 - 4 x DDR5 DIMM Slots<br>
+                                                 - Supports Intel® Extreme Memory Profile (XMP) 3.0
+                        </span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-name">GRAPHICS:</span>
+                        <span class="spec-value">- Intel® Xe Graphics Architecture (Gen 12)<br>
+                                                 - 1 x HDMI 2.1 TMDS Compatible, supports HDCP 2.3 and max. resolution up to 4K 60Hz<br>
+                                                 - 2 x Intel® Thunderbolt™ 4, supports HDCP 2.3 and max. resolution up to 8K 60Hz**
+                        </span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-name">AUDIO:</span>
+                        <span class="spec-value">- 5.1 CH HD Audio with Content Protection (Realtek ALC4082 Audio Codec)<br>
+                                                 - WIMA Audio Capacitors (For Front Outputs)
+                                                 - ESS SABRE9218 DAC for Front Panel Audio (130dB SNR) 
+                                                 - Individual PCB Layers for R/L Audio Channel                        
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="action-buttons">
+                    <div class="quantity-selector">
+                        <button class="qty-btn minus">-</button>
+                        <input type="number" value="1" min="1" class="qty-input">
+                        <button class="qty-btn plus">+</button>
+                    </div>
+                    <button class="add-to-cart">ADD TO CART</button>
+                    <button class="add-to-favorite">❤ ADD TO FAVORITES</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="popup-asrock-z790-steel" class="product-popup-overlay">
+        <div class="product-popup">
+            <a href="#" class="close-popup">&times;</a>
+            <div class="product-image-container">
+                <img src="images-motherboard(popout)/6.webp" alt="ASROCK">
+            </div>
+            <div class="product-details">
+                <h1 class="product-title">MSI MAG B850 Tomahawk MAX Wifi</h1>
+                <div class="warranty">[2 Years Warranty]</div>
+                
+                <div class="price">RM2000.00</div>
+                <div class="info">
+                    <div class="shipping-notice">Shipping calculated at checkout.</div>
+                    <div class="availability in-stock">Availability: In Stock</div>
+                </div>
+                <div class="specs">
+                    <h3>Technical Specifications:</h3>
+                    <div class="spec-item">
+                        <span class="spec-name">CPU:</span>
+                        <span class="spec-value">- Supports 14th, 13th & 12th Gen Intel® Core™ Processors (LGA1700)<br>
+                                                 - Supports Intel® Hybrid Technology
+                                                 - Supports Intel® Turbo Boost Max 3.0 Technology
+                                                 - Supports Intel® Thermal Velocity Boost (TVB)
+                        </span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-name">CHIPSET:</span>
+                        <span class="spec-value">- Intel® Z790</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-name">MEMORY:</span>
+                        <span class="spec-value">- Dual Channel DDR5 Memory Technology<br>
+                                                 - 4 x DDR5 DIMM Slots<br>
+                                                 - Supports DDR5 non-ECC, un-buffered memory up to 7200+(OC)<br>
+                                                 - Max. capacity of system memory: 256GB<br>
+                                                 - Supports Intel® Extreme Memory Profile (XMP) 3.0
+                        </span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-name">GRAPHICS:</span>
+                        <span class="spec-value">Intel® Xe Graphics Architecture (Gen 12)<br>
+                                                 - 1 x eDP 1.4, supports max. resolution up to Full HD 60Hz<br>
+                                                 - 1 x HDMI 2.1 TMDS Compatible, supports HDCP 2.3 and max. resolution up to 4K 60Hz<br>
+                                                 - 1 x DisplayPort 1.4 with DSC (compressed), supports HDCP 2.3 and max. resolution up to 8K 60Hz / 5K 120Hz
+                        </span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-name">AUDIO:</span>
+                        <span class="spec-value">- 7.1 CH HD Audio (Realtek ALC897 Audio Codec)<br>
+                                                 - Nahimic Audio                         
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="action-buttons">
+                    <div class="quantity-selector">
+                        <button class="qty-btn minus">-</button>
+                        <input type="number" value="1" min="1" class="qty-input">
+                        <button class="qty-btn plus">+</button>
+                    </div>
+                    <button class="add-to-cart">ADD TO CART</button>
+                    <button class="add-to-favorite">❤ ADD TO FAVORITES</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="popup-msi-x870" class="product-popup-overlay">
+        <div class="product-popup">
+            <a href="#" class="close-popup">&times;</a>
+            <div class="product-image-container">
+                <img src="images-motherboard(popout)/7.webp" alt="ASROCK">
+            </div>
+            <div class="product-details">
+                <h1 class="product-title">MSI MAG X870 Tomahawk Wifi</h1>
+                <div class="warranty">[2 Years Warranty]</div>
+                
+                <div class="price">RM1800.00</div>
+                <div class="info">
+                    <div class="shipping-notice">Shipping calculated at checkout.</div>
+                    <div class="availability in-stock">Availability: In Stock</div>
+                </div>
+                <div class="specs">
+                    <h3>Technical Specifications:</h3>
+                    <div class="spec-item">
+                        <span class="spec-name">CPU:</span>
+                        <span class="spec-value">- Supports AMD Ryzen™ 9000/ 8000/ 7000 Series Desktop Processors<br>
+                                                 - Socket AM5
+                        </span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-name">CHIPSET:</span>
+                        <span class="spec-value">- AMD X870</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-name">MEMORY:</span>
+                        <span class="spec-value">- 4x DDR5 UDIMM, Maximum Memory Capacity 256GB Memory Support DDR5 8400 - 5600 (OC) MT/s / 5600 - 4800 (JEDEC) MT/s<br>
+                                                 - Supports Memory Overclocking and AMD EXPO™<br>
+                                                 - Supports AMD POR Speed and JEDEC Speed
+                        </span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-name">GRAPHICS:</span>
+                        <span class="spec-value">Integrated Graphics Processor with AMD Radeon™ Graphics support<br>
+                                                 - 1 x HDMI port, Support HDMI™ 2.1 FRL, maximum resolution of 8K 60Hz<br>
+                                                 - 2x Type-C DisplayPort USB4® port, supporting DisplayPort 1.4 with HBR3 over USB Type-C, maximum resolution of 4K 60Hz*
+                        </span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-name">AUDIO:</span>
+                        <span class="spec-value">- Realtek® ALC4080 Codec 7.1-Channel USB High Performance Audio<br>
+                                                 - Supports up to 32-bit/384kHz playback on front panel                         
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="action-buttons">
+                    <div class="quantity-selector">
+                        <button class="qty-btn minus">-</button>
+                        <input type="number" value="1" min="1" class="qty-input">
+                        <button class="qty-btn plus">+</button>
+                    </div>
+                    <button class="add-to-cart">ADD TO CART</button>
+                    <button class="add-to-favorite">❤ ADD TO FAVORITES</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="popup-giga-x670" class="product-popup-overlay">
+        <div class="product-popup">
+            <a href="#" class="close-popup">&times;</a>
+            <div class="product-image-container">
+                <img src="images-motherboard(popout)/8.webp" alt="ASROCK">
+            </div>
+            <div class="product-details">
+                <h1 class="product-title">Gigabyte X670 Aorus Elite AX</h1>
+                <div class="warranty">[2 Years Warranty]</div>
+                
+                <div class="price">RM2000.00</div>
+                <div class="info">
+                    <div class="shipping-notice">Shipping calculated at checkout.</div>
+                    <div class="availability in-stock">Availability: In Stock</div>
+                </div>
+                <div class="specs">
+                    <h3>Technical Specifications:</h3>
+                    <div class="spec-item">
+                        <span class="spec-name">CPU:</span>
+                        <span class="spec-value">- AMD Socket AM5, support for: AMD Ryzen™ 7000 / Ryzen™ 8000 / Ryzen™ 9000 Series Processors
+                        </span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-name">CHIPSET:</span>
+                        <span class="spec-value">- AMD X670</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-name">MEMORY:</span>
+                        <span class="spec-value">- Support for DDR5 8000(OC)/ 7800(OC)/ 7600(OC)/ 7200(OC)/ 7000(OC)/ 6800(OC)/ 6666(OC)/ 6600(OC)/ 6400(OC)/ 6200(OC)/ 6000(OC)/ 5600(OC)/ 5200/ 4800/ 4400 MT/s memory modules<br>
+                                                 - 4 x DDR5 DIMM sockets supporting up to 256 GB (64 GB single DIMM capacity) of system memory<br>
+                                                 - Dual channel memory architecture<br>
+                                                 - Support for non-ECC Un-buffered DIMM 1Rx8/2Rx8/1Rx16 memory modules<br>
+                                                 - Support for AMD EXtended Profiles for Overclocking (AMD EXPO™) and Extreme Memory Profile (XMP) memory modules
+                        </span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-name">GRAPHICS:</span>
+                        <span class="spec-value">Integrated Graphics Processor:<br>
+                                                 - 1 x HDMI port, supporting a maximum resolution of 4096x2160@60 Hz<br>
+                                                 - Support for HDMI 2.1 version and HDCP 2.3<br>
+                                                 - Support native HDMI 2.1 TMDS compatible ports.
+                        </span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-name">AUDIO:</span>
+                        <span class="spec-value">- Realtek® Audio CODEC<br>
+                                                 - High Definition Audio<br>
+                                                 - 2/4/5.1/7.1-channel* You can change the functionality of an audio jack using the audio software. To configure 7.1-channel audio, access the audio software for audio settings                         
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="action-buttons">
+                    <div class="quantity-selector">
+                        <button class="qty-btn minus">-</button>
+                        <input type="number" value="1" min="1" class="qty-input">
+                        <button class="qty-btn plus">+</button>
+                    </div>
+                    <button class="add-to-cart">ADD TO CART</button>
+                    <button class="add-to-favorite">❤ ADD TO FAVORITES</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="popup-asus-b650" class="product-popup-overlay">
+        <div class="product-popup">
+            <a href="#" class="close-popup">&times;</a>
+            <div class="product-image-container">
+                <img src="images-motherboard(popout)/9.webp" alt="ASROCK">
+            </div>
+            <div class="product-details">
+                <h1 class="product-title">Asus TUF Gaming B650-Plus WiFi</h1>
+                <div class="warranty">[2 Years Warranty]</div>
+                
+                <div class="price">RM1700.00</div>
+                <div class="info">
+                    <div class="shipping-notice">Shipping calculated at checkout.</div>
+                    <div class="availability in-stock">Availability: In Stock</div>
+                </div>
+                <div class="specs">
+                    <h3>Technical Specifications:</h3>
+                    <div class="spec-item">
+                        <span class="spec-name">CPU:</span>
+                        <span class="spec-value">- AMD Socket AM5 for AMD Ryzen™ 9000 & 8000 & 7000 Series Desktop Processors*
+                        </span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-name">CHIPSET:</span>
+                        <span class="spec-value">- AMD B650</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-name">MEMORY:</span>
+                        <span class="spec-value">- 4 x DIMM, Max. 128GB, DDR5 7600+(OC)/ 7200(OC)/ 7000(OC)/ 6800(OC)/ 6600(OC)/ 6400(OC)/ 6200(OC)/ 6000(OC)/ 5800(OC)/ 5600(OC)/ 5400(OC)/ 5200/ 5000/ 4800 ECC & Non-ECC, Un-buffered Memory*<br>
+                                                 - Dual Channel Memory Architecture Supports AMD EXTended Profiles for Overclocking (EXPO™) OptiMem II<br>
+                                                 - * Supported memory types, data rate(Speed), and number of DRAM modules vary depending on the CPU and memory configuration
+                        </span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-name">GRAPHICS:</span>
+                        <span class="spec-value">- 1 x DisplayPort* 1 x HDMI® port**<br>
+                                                 - Supports max. 8K@60Hz as specified in DisplayPort 1.4<br>
+                                                 - Supports 4K@60Hz as specified in HDMI 2.1
+                        </span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-name">AUDIO:</span>
+                        <span class="spec-value">- Realtek 7.1 Surround Sound High Definition Audio CODEC*<br>
+                                                 - Supports: Jack-detection, Multi-streaming, Front Panel Jack-retasking<br>
+                                                 - Supports up to 24-Bit/192 kHz playback<br><br>
+                                                 <strong>Audio Features</strong><br>
+                                                 - Audio Shielding<br>
+                                                 - Power pre-regulator reduces power input noise to ensure consistent performance<br>
+                                                 - Premium audio capacitors<br>
+                                                 - Dedicated audio PCB layers<br>
+                                                 - Audio cover<br>
+                                                 - Unique de-pop circuit                         
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="action-buttons">
+                    <div class="quantity-selector">
+                        <button class="qty-btn minus">-</button>
+                        <input type="number" value="1" min="1" class="qty-input">
+                        <button class="qty-btn plus">+</button>
+                    </div>
+                    <button class="add-to-cart">ADD TO CART</button>
+                    <button class="add-to-favorite">❤ ADD TO FAVORITES</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="popup-asus-z890" class="product-popup-overlay">
+        <div class="product-popup">
+            <a href="#" class="close-popup">&times;</a>
+            <div class="product-image-container">
+                <img src="images-motherboard(popout)/10.jpg" alt="ASROCK">
+            </div>
+            <div class="product-details">
+                <h1 class="product-title">Asus ROG Maximus Z890 Hero</h1>
+                <div class="warranty">[2 Years Warranty]</div>
+                
+                <div class="price">RM2800.00</div>
+                <div class="info">
+                    <div class="shipping-notice">Shipping calculated at checkout.</div>
+                    <div class="availability in-stock">Availability: In Stock</div>
+                </div>
+                <div class="specs">
+                    <h3>Technical Specifications:</h3>
+                    <div class="spec-item">
+                        <span class="spec-name">CPU:</span>
+                        <span class="spec-value">- Support Intel® Core™ Ultra Processors (Series 2) , LGA1851*<br>
+                                                 - Supports Intel® Turbo Boost Technology 2.0 and Intel® Turbo Boost Max Technology 3.0**
+                        </span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-name">CHIPSET:</span>
+                        <span class="spec-value">- Intel® Z890 Chipset</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-name">MEMORY:</span>
+                        <span class="spec-value">- 4 x DIMM slots, max. 256GB, DDR5<br>
+                                                 - Support up to 9200+MT/s (OC), Non-ECC, Un-buffered, Clocked Unbuffered DIMM (CUDIMM)*<br>
+                                                 - Dual channel memory architecture<br>
+                                                 - Supports Intel® Extreme Memory Profile (XMP) memory module<br>
+                                                 - Supports DIMM Flex<br>
+                                                 - NitroPath DRAM Technology
+                        </span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-name">GRAPHICS:</span>
+                        <span class="spec-value">- 1 x HDMI™ port**  <br>
+                                                 - 2 x Intel® Thunderbolt™ 4 ports (USB Type-C®) support DisplayPort and Thunderbolt™ video outputs***<br>
+                                                 - *Supports max. 8K@60Hz with DSC as specified in HDMI 2.1<br>
+                                                 - * In Thunderbolt™ 4 mode, supports up to 8K@60Hz x1 with DSC or 4K@60Hz x2, maximum total bandwidth up to 23.8Gbps or 16Gbps/16Gbps, for resolution support please check DisplayPort 2.1 specs
+                        </span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-name">AUDIO:</span>
+                        <span class="spec-value">ROG SupremeFX 7.1 Surround Sound High Definition Audio CODEC ALC4082*<br>
+                                                 - Impedance sense for front and rear headphone outputs<br>
+                                                 - Supports: Jack-detection, Multi-streaming, Front Panel MIC Jack-retasking<br>
+                                                 - High quality 120 dB SNR stereo playback output and 110 dB SNR recording input<br>
+                                                 - Supports up to 32-Bit/384 kHz playback on front panel" Audio Features                          
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="action-buttons">
+                    <div class="quantity-selector">
+                        <button class="qty-btn minus">-</button>
+                        <input type="number" value="1" min="1" class="qty-input">
+                        <button class="qty-btn plus">+</button>
+                    </div>
+                    <button class="add-to-cart">ADD TO CART</button>
+                    <button class="add-to-favorite">❤ ADD TO FAVORITES</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="popup-msi-z790" class="product-popup-overlay">
+        <div class="product-popup">
+            <a href="#" class="close-popup">&times;</a>
+            <div class="product-image-container">
+                <img src="images-motherboard(popout)/11.png" alt="ASROCK">
+            </div>
+            <div class="product-details">
+                <h1 class="product-title">MSI MAG Z790 Tomahawk WiFi</h1>
+                <div class="warranty">[2 Years Warranty]</div>
+                
+                <div class="price">RM1700.00</div>
+                <div class="info">
+                    <div class="shipping-notice">Shipping calculated at checkout.</div>
+                    <div class="availability in-stock">Availability: In Stock</div>
+                </div>
+                <div class="specs">
+                    <h3>Technical Specifications:</h3>
+                    <div class="spec-item">
+                        <span class="spec-name">CPU:</span>
+                        <span class="spec-value">- Support Intel® Core™ 14th/ 13th/ 12th Gen Processors, Intel® Pentium® Gold and Celeron® Processors<br>
+                        </span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-name">CHIPSET:</span>
+                        <span class="spec-value">- INTEL Z790</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-name">MEMORY:</span>
+                        <span class="spec-value">- 4x DDR5, Maximum Memory Capacity 256GB Memory Support 7200+(OC)/ 7000(OC)/ 6800(OC)/ 6600(OC)/ 6400(OC)/ 6200(OC)/ 6000(OC)/ 5800(OC)/ 5600(JEDEC)/ 5400(JEDEC)/ 5200(JEDEC)/ 5000(JEDEC)/ 4800(JEDEC) MHz<br>
+                                                 - Supports Intel® XMP3.0 OC<br>
+                                                 - Supports Dual-Controller Dual-Channel mode<br>
+                                                 - Supports non-ECC, un-buffered memory
+                        </span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-name">GRAPHICS:</span>
+                        <span class="spec-value">- 1x HDMI™ *Support HDMITM 2.1 with HDR, maximum resolution of 4K 60Hz*<br>
+                                                 - 1x DisplayPort *Support DP 1.4, maximum resolution of 8K 60Hz* <br>
+                                                 - *Available only on processors featuring integrated graphics. Graphics specifications may vary depending on the CPU installed
+                        </span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-name">AUDIO:</span>
+                        <span class="spec-value">- Realtek® ALC4080 Codec<br>
+                                                 - 7.1-Channel USB High Performance Audio<br>
+                                                 - Supports S/PDIF output<br>
+                                                 - Supports up to 32-Bit/384 kHz playback on front panel                         
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="action-buttons">
+                    <div class="quantity-selector">
+                        <button class="qty-btn minus">-</button>
+                        <input type="number" value="1" min="1" class="qty-input">
+                        <button class="qty-btn plus">+</button>
+                    </div>
+                    <button class="add-to-cart">ADD TO CART</button>
+                    <button class="add-to-favorite">❤ ADD TO FAVORITES</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="popup-asrock-b760m" class="product-popup-overlay">
+        <div class="product-popup">
+            <a href="#" class="close-popup">&times;</a>
+            <div class="product-image-container">
+                <img src="images-motherboard(popout)/12.jpeg" alt="ASROCK">
+            </div>
+            <div class="product-details">
+                <h1 class="product-title">Asrock B760M PG Sonic WiFi</h1>
+                <div class="warranty">[2 Years Warranty]</div>
+                
+                <div class="price">RM1000.00</div>
+                <div class="info">
+                    <div class="shipping-notice">Shipping calculated at checkout.</div>
+                    <div class="availability in-stock">Availability: In Stock</div>
+                </div>
+                <div class="specs">
+                    <h3>Technical Specifications:</h3>
+                    <div class="spec-item">
+                        <span class="spec-name">CPU:</span>
+                        <span class="spec-value">- Supports 13th Gen & 12th Gen and next gen Intel® Core™ Processors (LGA1700)<br>              
+                                                 - Supports Intel® Hybrid Technology<br> 
+                                                 - Supports Intel® Turbo Boost Max 3.0 Technology<br> 
+                                                 - Supports Intel® Thermal Velocity Boost (TVB)<br> 
+                                                 - Supports Intel® Adaptive Boost Technology (ABT)
+                        </span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-name">CHIPSET:</span>
+                        <span class="spec-value">- Intel® B760</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-name">MEMORY:</span>
+                        <span class="spec-value">- Dual Channel DDR5 Memory Technology<br>
+                                                 - 4 x DDR5 DIMM Slots<br>
+                                                 - Supports DDR5 non-ECC, un-buffered memory up to 7200+(OC)*<br>
+                                                 - Max. capacity of system memory: 256GB<br>
+                                                 - Supports Intel® Extreme Memory Profile (XMP) 3.0
+                        </span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-name">GRAPHICS:</span>
+                        <span class="spec-value">- Intel® Xe Graphics Architecture (Gen 12)<br>
+                                                 - 1 x eDP 1.4, supports max. resolution up to Full HD 60Hz<br>
+                                                 - 1 x HDMI 2.1 TMDS Compatible, supports HDCP 2.3 and max. resolution up to 4K 60Hz<br>
+                                                 - 1 x DisplayPort 1.4 with DSC (compressed), supports HDCP 2.3 and max. resolution up to 8K 60Hz / 5K 120Hz
+                        </span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-name">AUDIO:</span>
+                        <span class="spec-value">- 7.1 CH HD Audio (Realtek ALC897 Audio Codec)<br>
+                                                 - Nahimic Audio                         
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="action-buttons">
+                    <div class="quantity-selector">
+                        <button class="qty-btn minus">-</button>
+                        <input type="number" value="1" min="1" class="qty-input">
+                        <button class="qty-btn plus">+</button>
+                    </div>
+                    <button class="add-to-cart">ADD TO CART</button>
+                    <button class="add-to-favorite">❤ ADD TO FAVORITES</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <footer class="footer">
+        <div class="footer-container">
+          <div class="footer-sections">
+            <div class="footer-section">
+              <div class="footer-title">CUSTOMER CARE</div>
+              <ul class="footer-links">
+                <li><a href="#">Shipping Policy</a></li>
+                <li><a href="#">Warranty & Exchange</a></li>
+                <li><a href="#">FAQs</a></li>
+                <li><a href="#">Contact Us</a></li>
+              </ul>
+            </div>
+            
+            <div class="footer-section">
+              <div class="footer-title">COMPANY</div>
+              <ul class="footer-links">
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Careers</a></li>
+                <li><a href="#">Terms of Service</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+              </ul>
+            </div>
+            
+            <div class="footer-section">
+              <div class="footer-title">PAYMENT METHODS</div>
+              <div class="payment-methods">
+                <div class="payment-item">VISA</div>
+                <div class="payment-item">MASTERCARD</div>
+                <div class="payment-item">HONGLEONG BANK</div>
+                <div class="payment-item">HSBC BANK</div>
+                <div class="payment-item">RHB BANK</div>
+                <div class="payment-item">UOB BANK</div>
+                <div class="payment-item">PUBLIC BANK</div>
+                <div class="payment-item">FPX</div>
+                <div class="payment-item">GRAB PAY</div>
+                <div class="payment-item">TOUCH'NGO EWALLET</div>
+                <div class="payment-item">BANKISLAM</div>               
+              </div>
+            </div>
+          </div>
+          
+          <div class="copyright">
+            &copy; 2023 Nexus Components. All Rights Reserved.
+          </div>
+        </div>
+      </footer>
+
+    <script src="favorite.js"></script>
+    <script src="product-details.js"></script>
+</body>
+</html>
